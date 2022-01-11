@@ -1,0 +1,12 @@
+# Theme color - Ubuntu/Kbuntu
+[[plugins]]
+repo = 'haishanh/night-owl.vim'
+hook_add = """
+source $HOME/.cache/dein/repos/github.com/haishanh/night-owl.vim/colors/night-owl.vim
+"""
+
+# [[plugins]]
+# repo = 'morhetz/gruvbox'
+# hook_add = """
+# source $HOME/.cache/dein/repos/github.com/morhetz/gruvbox/colors/gruvbox.vim
+# """

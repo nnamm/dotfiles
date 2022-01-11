@@ -1,0 +1,57 @@
+{
+  // Basic
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "python",
+    "go",
+    "html",
+    "css",
+    "json",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "rust",
+    "svelte",
+    "vue"
+  ],
+  "coc.preferences.formatOnType": true,
+
+  // Python
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": ["--config", "pyproject.toml", "--quiet", "--fast"],
+  // flake8 memo
+  // There is no 'flake8Arg' setting in coc-pyright.
+  // But to use pyproject-flake8, need to specify 'pyproject.toml'.
+  "python.linting.flake8Enabled": true,
+  "python.linting.flake8Args": ["--config", "pyproject.toml"],
+  // mypy memo
+  // Using coc-pyright, no need to specify a config file for mypy.
+  // It seems to load '.mypy.ini or mypy.ini' by default.
+  "python.linting.mypyEnabled": true,
+  // pylint memo
+  // There is no 'pylintArgs' setting in coc-pyright.
+  // But to use pylint, need to specify 'pyproject.toml'.
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintArgs": ["--rcfile", "pyproject.toml"],
+  "pyright.organizeimports.provider": "isort",
+  "python.sortImports.args": ["--settings-path", "pyproject.toml"],
+
+  // JavaScript
+  "eslint.autoFixOnSave": true,
+  "prettier.disableSuccessMessage": true,
+  "prettier.printWidth": 140,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "json.enable": true,
+  "json.format.enable": true,
+  "svelte.enable-ts-plugin": true,
+  "vetur.format.defaultFormatterOptions": {
+    "prettier": {
+      "printWidth": 140,
+      "singleQuote": false,
+      "wrapAttributes": false,
+      "sortAttributes": false
+    }
+  }
+}
