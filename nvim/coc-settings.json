@@ -16,6 +16,7 @@
     "vue"
   ],
   "coc.preferences.formatOnType": true,
+  "suggest.keepCompleteopt": true,
 
   // Python
   "python.formatting.provider": "black",

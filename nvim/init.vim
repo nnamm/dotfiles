@@ -34,24 +34,25 @@ filetype indent on
 syntax enable
 
 set encoding=utf-8
-set number                      " Display line number
-set scrolloff=8                 " Control screen lines
-set splitbelow                  " Display to the bottom when split horizontally
-set splitright                  " Display to the right when split vertically
-set hlsearch                    " Highlight search text
-set incsearch                   " Incremental search
-set ignorecase                  " Do not distinguish between upper & lower case when searching
-set smartcase                   " If it contains capital letters, distinguish them
-set wildmenu                    " Command completion
-set wildmode=longest:full       " Enable file name completion
-set nowrap                      " Stop line wrapping
-set cindent                     " Indent mode
-set termguicolors               " True Color
-set tabstop=4                   " Spaces count as a single tab
-set shiftwidth=4                " Number of spaces when tabbed
-set softtabstop=4               " Number of spaces when indented
-set expandtab                   " Convert tab to space
-set clipboard=unnamed           " Copy to clipboard
+set number                         " Display line number
+set scrolloff=10                   " Control screen lines
+set splitbelow                     " Display to the bottom when split horizontally
+set splitright                     " Display to the right when split vertically
+set hlsearch                       " Highlight search text
+set incsearch                      " Incremental search
+set ignorecase                     " Do not distinguish between upper & lower case when searching
+set smartcase                      " If it contains capital letters, distinguish them
+set wildmenu                       " Command completion
+set wildmode=longest:full          " Enable file name completion
+set nowrap                         " Stop line wrapping
+set cindent                        " Indent mode
+set termguicolors                  " True Color
+set tabstop=4                      " Spaces count as a single tab
+set shiftwidth=4                   " Number of spaces when tabbed
+set softtabstop=4                  " Number of spaces when indented
+set expandtab                      " Convert tab to space
+set clipboard=unnamed              " Copy to clipboard
+set completeopt=menuone,noinsert   " Control completion window
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 let mapleader = ","
@@ -90,7 +91,8 @@ nnoremap <silent> <leader>r :Rg<CR>
 " Plugin preview-markdown.vim
 nmap <leader>pm :PreviewMarkdown<CR>
 
-" Plugin vim-airline action
+" Plugin vim-airline
+nmap <C-_> <Plug>AirlineSelectPrevTab
 nmap <C-]> <Plug>AirlineSelectNextTab
 
 " Plugin Vimspector
