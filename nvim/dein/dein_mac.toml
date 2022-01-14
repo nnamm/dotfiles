@@ -8,18 +8,12 @@ source $HOME/.cache/dein/repos/github.com/cocopon/iceberg.vim/colors/iceberg.vim
 # [[plugins]]
 # repo = 'ayu-theme/ayu-vim'
 # hook_add = """
-# source $HOME/.cache/dein/repos/github.com/ayu-theme/ayu-vim/colors/ayu.vim
-# let g:ayucolor = "dark"
+# let g:ayucolor = 'dark'
 # colorscheme ayu
 # """
 
 # [[plugins]]
-# repo = 'sainnhe/sonokai'
+# repo = 'EdenEast/nightfox.nvim'
 # hook_add = """
-# source $HOME/.cache/dein/repos/github.com/sainnhe/sonokai/colors/sonokai.vim
-# let g:sonokai_style = "maia"
-# let g:sonokai_enable_italic = 1
-# let g:sonokai_disable_italic_comment = 1
-# let g:sonokai_better_performance = 1
-# colorscheme sonokai
+# colorscheme nightfox
 # """
