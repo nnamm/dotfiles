@@ -89,7 +89,7 @@ nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>h :History<CR>
 nnoremap <silent> <leader>r :Rg<CR>
 
-" review-markdown.vim
+" preview-markdown.vim
 nmap <leader>pm :PreviewMarkdown<CR>
 
 " vim-airline
