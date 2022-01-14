@@ -1,8 +1,14 @@
-# Theme color - Ubuntu/Kbuntu
+# Theme color - Ubuntu/Kubuntu
+# [[plugins]]
+# repo = 'haishanh/night-owl.vim'
+# hook_add = """
+# source $HOME/.cache/dein/repos/github.com/haishanh/night-owl.vim/colors/night-owl.vim
+# """
+
 [[plugins]]
-repo = 'haishanh/night-owl.vim'
+repo = 'EdenEast/nightfox.nvim'
 hook_add = """
-source $HOME/.cache/dein/repos/github.com/haishanh/night-owl.vim/colors/night-owl.vim
+colorscheme nightfox
 """
 
 # [[plugins]]
