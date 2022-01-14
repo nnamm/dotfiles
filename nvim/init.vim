@@ -80,7 +80,8 @@ inoremap <S-Tab> <C-D>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
-" Plugin fzf.vim
+" Plugin ------------------------------------------------------
+" fzf.vim
 nnoremap <silent> <leader>f :Files<CR>
 nnoremap <silent> <leader>g :GFiles<CR>
 nnoremap <silent> <leader>G :GFiles?<CR>
@@ -88,14 +89,22 @@ nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <leader>h :History<CR>
 nnoremap <silent> <leader>r :Rg<CR>
 
-" Plugin preview-markdown.vim
+" review-markdown.vim
 nmap <leader>pm :PreviewMarkdown<CR>
 
-" Plugin vim-airline
+" vim-airline
 nmap <C-_> <Plug>AirlineSelectPrevTab
 nmap <C-]> <Plug>AirlineSelectNextTab
 
-" Plugin Vimspector
+" vim-quickhl
+nmap <leader>m <Plug>(quickhl-manual-this)
+xmap <leader>m <Plug>(quickhl-manual-this)
+nmap <leader>M <Plug>(quickhl-manual-reset)
+xmap <leader>M <Plug>(quickhl-manual-reset)
+nmap <leader>+ <Plug>(quickhl-cword-toggle)
+xmap <leader>+ <Plug>(quickhl-cword-toggle)
+
+" Vimspector
 nmap <leader>vl :call vimspector#Launch()<CR>
 nmap <leader>vr :VimspectorReset<CR>
 nmap <leader>ve :VimspectorEval
@@ -104,8 +113,7 @@ nmap <leader>vo :VimspectorShowOutput
 nmap <leader>vi <Plug>VimspectorBalloonEval
 xmap <leader>vi <Plug>VimspectorBalloonEval
 
-" autocmd - tab/space
-" autocmd FileType javascript,json,svelte,css,scss,html,vim,vue setlocal tabstop=2 shiftwidth=0 expandtab
+" autocmd ----------------------------------------------------- 
 autocmd FileType css             setlocal ts=2 sw=0 et
 autocmd FileType html            setlocal ts=2 sw=0 et
 autocmd FileType javascript      setlocal ts=2 sw=0 et
@@ -117,7 +125,6 @@ autocmd FileType typescript      setlocal ts=2 sw=0 et
 autocmd FileType typescriptreact setlocal ts=2 sw=0 et
 autocmd FileType vim             setlocal ts=2 sw=0 et
 autocmd FileType vue             setlocal ts=2 sw=0 et
-" autocmd
 autocmd FileType python let b:coc_root_patterns = ['.git', '.env', 'venv', '.venv', 'setup.cfg', 'setup.py', 'pyproject.toml']
 autocmd BufWrite *.py :silent call CocAction('runCommand', 'python.sortImports')
 autocmd BufWrite *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')

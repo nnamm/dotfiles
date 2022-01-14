@@ -43,6 +43,8 @@ repo = 'tpope/vim-surround'
 # Cursor
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
+[[plugins]]
+repo = 't9md/vim-quickhl'
 
 # Comment
 [[plugins]]
