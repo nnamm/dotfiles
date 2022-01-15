@@ -16,6 +16,7 @@
     "vue"
   ],
   "coc.preferences.formatOnType": true,
+  "snippets.ultisnips.directories": ["~/.config/nvim/plugins/UltiSnips"],
   "suggest.keepCompleteopt": true,
 
   // Python

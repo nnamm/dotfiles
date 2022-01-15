@@ -1,4 +1,4 @@
-" dein --------------------------------------------------------
+" dein ---------------------------------------------------------------
 if &compatible
   set nocompatible
 endif
@@ -28,7 +28,7 @@ if filereadable(expand('~/dotfiles/nvim/token'))
   source ~/dotfiles/nvim/token
 endif
 
-" General -----------------------------------------------------
+" General ------------------------------------------------------------
 filetype plugin on
 filetype indent on
 syntax enable
@@ -56,12 +56,11 @@ set completeopt=menuone,noinsert   " Control completion window
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 let mapleader = ","
-nmap <leader>e <Plug>(easymotion-s2)
-
 nnoremap ss :split<CR><C-w>j
 nnoremap sv :vsplit<CR><C-w>l
 nnoremap <silent><ESC><ESC> :nohlsearch<CR>
 
+" cursor
 inoremap <C-f> <RIGHT>
 inoremap <C-b> <LEFT>
 inoremap <C-p> <UP>
@@ -69,7 +68,7 @@ inoremap <C-n> <DOWN>
 inoremap <C-d> <DEL>
 nmap 9 $
 
-" do not enter the default register by deleting the x key
+" do not enter the default register by deleting key
 nnoremap x "_x
 vnoremap x "_x
 
@@ -80,7 +79,13 @@ inoremap <S-Tab> <C-D>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
-" Plugin ------------------------------------------------------
+" Plugin -------------------------------------------------------------
+" coc-snippets
+imap <C-k> <Plug>(coc-snippets-expand)
+nnoremap <leader>s :CocList snippets<CR>
+let g:coc_snippet_next = '<C-a>'
+let g:coc_snippet_prev = '<C-z>'
+
 " fzf.vim
 nnoremap <silent> <leader>f :Files<CR>
 nnoremap <silent> <leader>g :GFiles<CR>
@@ -95,6 +100,9 @@ nmap <leader>pm :PreviewMarkdown<CR>
 " vim-airline
 nmap <C-_> <Plug>AirlineSelectPrevTab
 nmap <C-]> <Plug>AirlineSelectNextTab
+
+" vim-easymotion
+nmap <leader>e <Plug>(easymotion-s2)
 
 " vim-quickhl
 nmap <leader>m <Plug>(quickhl-manual-this)
@@ -113,7 +121,7 @@ nmap <leader>vo :VimspectorShowOutput
 nmap <leader>vi <Plug>VimspectorBalloonEval
 xmap <leader>vi <Plug>VimspectorBalloonEval
 
-" autocmd ----------------------------------------------------- 
+" autocmd ------------------------------------------------------------
 autocmd FileType css             setlocal ts=2 sw=0 et
 autocmd FileType html            setlocal ts=2 sw=0 et
 autocmd FileType javascript      setlocal ts=2 sw=0 et

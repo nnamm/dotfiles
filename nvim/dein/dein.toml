@@ -34,7 +34,7 @@ repo = 'jiangmiao/auto-pairs'
 [[plugins]]
 repo = 'alvan/vim-closetag'
 hook_add = """
-let g:closetag_filenames = '*.html,*.js,*.jsx,*.vue'
+let g:closetag_filenames = '*.html,*.js,*.jsx,*.ts,*.tsx,*.vue'
 let g:closetag_emptyTags_caseSensitive = 1
 """
 [[plugins]]
@@ -97,13 +97,3 @@ source $HOME/.config/nvim/plugins/coc.rc.vim
 # Snippet
 [[plugins]]
 repo = 'sirver/ultisnips'
-hook_add = """
-let g:UltiSnipsUsePythonVersion = 3
-let g:UltiSnipsEditSplit = 'normal'
-let g:UltiSnipsSnippetDirectories = [$HOME.'/.config/nvim/plugins/snippets']
-let g:UltiSnipsEnableSnipMate = 0
-let g:UltiSnipsExpandTrigger = '<c-k>'
-let g:UltiSnipsJumpForwardTrigger = '<c-a>'
-let g:UltiSnipsJumpBackwardTrigger = '<c-z>'
-command! SNIP UltiSnipsEdit
-"""

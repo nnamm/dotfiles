@@ -63,6 +63,7 @@ let g:coc_global_extensions = [
   \ 'coc-prettier',
   \ 'coc-pyright',
   \ 'coc-rust-analyzer',
+  \ 'coc-snippets',
   \ 'coc-svelte',
   \ 'coc-toml',
   \ 'coc-tsserver',
