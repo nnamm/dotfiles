@@ -97,3 +97,6 @@ source $HOME/.config/nvim/plugins/coc.rc.vim
 # Snippet
 [[plugins]]
 repo = 'sirver/ultisnips'
+hook_add = """
+let g:ultisnips_python_style = "google"
+"""

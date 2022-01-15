@@ -177,7 +177,8 @@ def format_return(style):
 	elif style in (NORMAL, SPHINX, JEDI):
 		return ":returns: TODO"
 	elif style == GOOGLE:
-		return "Returns: TODO"
+		#return "Returns: TODO"
+		return "Returns:"
 
 
 def write_docstring_args(args, snip):
@@ -204,18 +205,18 @@ def write_google_docstring_args(args, snip):
 
 	if args:
 		snip += "Args:"
-		snip.shift()
-		for arg in args:
-			snip += format_arg(arg, GOOGLE)
-		snip.unshift()
+		#snip.shift()
+		#for arg in args:
+		#	snip += format_arg(arg, GOOGLE)
+		#snip.unshift()
 		snip.rv += '\n' + snip.mkline('', indent='')
 
 	if kwargs:
 		snip += "Kwargs:"
-		snip.shift()
-		for kwarg in kwargs:
-			snip += format_arg(kwarg, GOOGLE)
-		snip.unshift()
+		#snip.shift()
+		#for kwarg in kwargs:
+		#	snip += format_arg(kwarg, GOOGLE)
+		#snip.unshift()
 		snip.rv += '\n' + snip.mkline('', indent='')
 
 
@@ -265,7 +266,7 @@ def write_function_docstring(t, snip):
 	:param snip: UltiSnips.TextObjects.SnippetUtil object instance
 	"""
 	snip.rv = ""
-	snip >> 1
+	# snip >> 1
 
 	args = get_args(t[2])
 	if args:
