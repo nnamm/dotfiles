@@ -80,11 +80,18 @@ vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
 " Plugin -------------------------------------------------------------
+" coc.nvim
+nnoremap <leader>ccl :CocList<CR>
+nnoremap <leader>ccu :CocUpdate<CR>
+
 " coc-snippets
 imap <C-k> <Plug>(coc-snippets-expand)
 nnoremap <leader>s :CocList snippets<CR>
 let g:coc_snippet_next = '<C-a>'
 let g:coc_snippet_prev = '<C-z>'
+
+" dein.vim
+nnoremap <leader>dcu :call dein#check_update(v:true)<CR>
 
 " fzf.vim
 nnoremap <silent> <leader>f :Files<CR>
