@@ -1,3 +1,11 @@
+" ENTER/TAB are confirming keys.
+inoremap <silent><expr> <CR>
+         \ pumvisible() ? coc#_select_confirm() :
+         \ "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <tab>
+         \ pumvisible() ? coc#_select_confirm() :
+         \ "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 " Show document in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 function! s:show_documentation()

@@ -98,5 +98,8 @@ source $HOME/.config/nvim/plugins/coc.rc.vim
 [[plugins]]
 repo = 'sirver/ultisnips'
 hook_add = """
+let g:UltiSnipsExpandTrigger='<Nop>'
+let g:UltiSnipsJumpForwardTrigger='<Nop>'
+let g:UltiSnipsJumpBackwardTrigger='<Nop>'
 let g:ultisnips_python_style = "google"
 """
