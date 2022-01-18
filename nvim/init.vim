@@ -42,6 +42,7 @@ set hlsearch                       " Highlight search text
 set incsearch                      " Incremental search
 set ignorecase                     " Do not distinguish between upper & lower case when searching
 set smartcase                      " If it contains capital letters, distinguish them
+set cursorline                     " Highlight a current line
 set wildmenu                       " Command completion
 set wildmode=longest:full          " Enable file name completion
 set nowrap                         " Stop line wrapping
@@ -53,11 +54,12 @@ set softtabstop=4                  " Number of spaces when indented
 set expandtab                      " Convert tab to space
 set clipboard=unnamed              " Copy to clipboard
 set completeopt=menuone,noinsert   " Control completion window
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+" set cmdheight=2                    " Display message space
+" set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 let mapleader = ","
-nnoremap ss :split<CR><C-w>j
-nnoremap sv :vsplit<CR><C-w>l
+nnoremap <silent>ss :split<CR><C-w>j
+nnoremap <silent>sv :vsplit<CR><C-w>l
 nnoremap <silent><ESC><ESC> :nohlsearch<CR>
 
 " cursor
@@ -68,10 +70,6 @@ inoremap <C-n> <DOWN>
 inoremap <C-d> <DEL>
 nmap 9 $
 
-" do not enter the default register by deleting key
-nnoremap x "_x
-vnoremap x "_x
-
 " Tab key action
 nnoremap <Tab> >>_
 nnoremap <S-Tab> <<_
@@ -79,30 +77,27 @@ inoremap <S-Tab> <C-D>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
-" Plugin -------------------------------------------------------------
-" coc.nvim
-nnoremap <leader>ccl :CocList<CR>
-nnoremap <leader>ccu :CocUpdate<CR>
+" do not enter the default register by deleting key
+nnoremap x "_x
+vnoremap x "_x
 
-" coc-snippets
-imap <C-k> <Plug>(coc-snippets-expand)
-nnoremap <leader>s :CocList snippets<CR>
-let g:coc_snippet_next = '<C-a>'
-let g:coc_snippet_prev = '<C-z>'
+" Plugin command -----------------------------------------------------
+" coc.nvim -> coc.rc.vim
+" defx.nvim -> defx.rc.vim
 
 " dein.vim
-nnoremap <leader>dcu :call dein#check_update(v:true)<CR>
+nnoremap <leader>du :call dein#check_update(v:true)<CR>
 
 " fzf.vim
-nnoremap <silent> <leader>f :Files<CR>
-nnoremap <silent> <leader>g :GFiles<CR>
-nnoremap <silent> <leader>G :GFiles?<CR>
-nnoremap <silent> <leader>b :Buffers<CR>
-nnoremap <silent> <leader>h :History<CR>
-nnoremap <silent> <leader>r :Rg<CR>
+nnoremap <silent><leader>f :Files<CR>
+nnoremap <silent><leader>g :GFiles<CR>
+nnoremap <silent><leader>G :GFiles?<CR>
+nnoremap <silent><leader>b :Buffers<CR>
+nnoremap <silent><leader>h :History<CR>
+nnoremap <silent><leader>r :Rg<CR>
 
 " preview-markdown.vim
-nmap <leader>pm :PreviewMarkdown<CR>
+nmap <silent> <leader>pm :PreviewMarkdown<CR>
 
 " vim-airline
 nmap <C-_> <Plug>AirlineSelectPrevTab

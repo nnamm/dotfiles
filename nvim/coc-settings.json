@@ -38,6 +38,7 @@
   "python.linting.pylintArgs": ["--rcfile", "pyproject.toml"],
   "pyright.organizeimports.provider": "isort",
   "python.sortImports.args": ["--settings-path", "pyproject.toml"],
+  "pyright.completion.snippetSupport": false,
 
   // JavaScript
   "eslint.autoFixOnSave": true,

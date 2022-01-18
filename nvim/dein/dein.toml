@@ -29,8 +29,8 @@ repo = 'kristijanhusak/defx-git'
 repo = 'jlanzarotta/bufexplorer'
 
 # Brackets
-[[plugins]]
-repo = 'jiangmiao/auto-pairs'
+# [[plugins]]
+# repo = 'jiangmiao/auto-pairs'
 [[plugins]]
 repo = 'alvan/vim-closetag'
 hook_add = """
