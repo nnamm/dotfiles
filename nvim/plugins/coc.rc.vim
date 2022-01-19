@@ -2,9 +2,9 @@
 inoremap <silent><expr> <CR>
          \ pumvisible() ? coc#_select_confirm() :
          \ "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-inoremap <silent><expr> <tab>
+inoremap <silent><expr> <Tab>
          \ pumvisible() ? coc#_select_confirm() :
-         \ "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+         \ "\<Tab>"
 
 " Show document in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>

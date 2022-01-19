@@ -42,6 +42,7 @@ set hlsearch                       " Highlight search text
 set incsearch                      " Incremental search
 set ignorecase                     " Do not distinguish between upper & lower case when searching
 set smartcase                      " If it contains capital letters, distinguish them
+set nowrapscan                     " Do not cycle the searching
 set cursorline                     " Highlight a current line
 set wildmenu                       " Command completion
 set wildmode=longest:full          " Enable file name completion
@@ -61,6 +62,7 @@ let mapleader = ","
 nnoremap <silent>ss :split<CR><C-w>j
 nnoremap <silent>sv :vsplit<CR><C-w>l
 nnoremap <silent><ESC><ESC> :nohlsearch<CR>
+vnoremap v ^$h
 
 " cursor
 inoremap <C-f> <RIGHT>
@@ -97,7 +99,12 @@ nnoremap <silent><leader>h :History<CR>
 nnoremap <silent><leader>r :Rg<CR>
 
 " preview-markdown.vim
-nmap <silent> <leader>pm :PreviewMarkdown<CR>
+nmap <silent><leader>pm :PreviewMarkdown<CR>
+
+" test.vim
+nmap <silent><leader>t :TestNearest<CR>
+nmap <silent><leader>T :TestFile<CR>
+tmap <C-o> <C-\><C-n>
 
 " vim-airline
 nmap <C-_> <Plug>AirlineSelectPrevTab

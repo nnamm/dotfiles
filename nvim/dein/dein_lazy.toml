@@ -67,3 +67,12 @@ hook_add = """
 let g:vimspector_enable_mappings = 'HUMAN'
 let g:vimspector_install_gadgets = ['debugpy', 'vscode-go', 'vscode-node-debug2']
 """
+
+#--- Test runner ---#
+[[plugins]]
+repo = 'janko-m/vim-test'
+on_ft = ['python']
+hook_add = """
+let g:test#strategy = 'neovim'
+let g:test#python#runner = 'pytest'
+"""

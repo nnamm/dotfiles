@@ -29,8 +29,8 @@ repo = 'kristijanhusak/defx-git'
 repo = 'jlanzarotta/bufexplorer'
 
 # Brackets
-# [[plugins]]
-# repo = 'jiangmiao/auto-pairs'
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
 [[plugins]]
 repo = 'alvan/vim-closetag'
 hook_add = """
@@ -101,5 +101,5 @@ hook_add = """
 let g:UltiSnipsExpandTrigger='<Nop>'
 let g:UltiSnipsJumpForwardTrigger='<Nop>'
 let g:UltiSnipsJumpBackwardTrigger='<Nop>'
-let g:ultisnips_python_style = "google"
+let g:ultisnips_python_style = 'google'
 """
