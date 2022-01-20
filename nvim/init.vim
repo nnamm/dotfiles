@@ -122,6 +122,7 @@ nmap <leader>+ <Plug>(quickhl-cword-toggle)
 xmap <leader>+ <Plug>(quickhl-cword-toggle)
 
 " Vimspector
+" F-keys functions: https://github.com/puremourning/vimspector#human-mode
 nmap <leader>vl :call vimspector#Launch()<CR>
 nmap <leader>vr :VimspectorReset<CR>
 nmap <leader>ve :VimspectorEval
@@ -129,6 +130,8 @@ nmap <leader>vw :VimspectorWatch
 nmap <leader>vo :VimspectorShowOutput
 nmap <leader>vi <Plug>VimspectorBalloonEval
 xmap <leader>vi <Plug>VimspectorBalloonEval
+nmap <LocalLeader><F11> <Plug>VimspectorUpFrame
+nmap <LocalLeader><F12> <Plug>VimspectorDownFrame
 
 " autocmd ------------------------------------------------------------
 autocmd FileType css             setlocal ts=2 sw=0 et
