@@ -42,15 +42,15 @@ nnoremap x "_x
 vnoremap x "_x
 
 " 画面分割（エディタ部）
-" nnoremap <leader>sv :vsplit<CR>
-" nnoremap <leader>ss :split<CR>
-" 画面分割 → 移動（エディタ部）Keymapで対応
-" ^W + V
-" ^W + S
+nnoremap <leader>sv :vsplit<CR>
+nnoremap <leader>ss :split<CR>
+" 画面分割 -> 移動（エディタ部）Keymapで対応
+" Split and Move Right -> ^[
+" Split and Move Down  -> ^:
 
 " Action
-" Quick Documentation -> ctrl + j / f1
-" Quick Definition -> ctrl + y / alt + space
+" Quick Documentation -> ctrl + k
+" Quick Definition -> ctrl + j / alt + space
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gt :action QuickTypeDefinition<CR>
@@ -62,4 +62,4 @@ nnoremap <leader>cp :action CloseProject<CR>
 nnoremap <leader>ct :action CloseActiveTab<CR>
 nnoremap <leader>sp :action Stop<CR>
 " nnoremap <C-]> :action NextTab<CR> Keymapで対応
-" nnoremap <C-[> :action PreviousTab<CR> Keymapで対応
+" nnoremap <C-_> :action PreviousTab<CR> Keymapで対応
