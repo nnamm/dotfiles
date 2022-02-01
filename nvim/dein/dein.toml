@@ -41,8 +41,10 @@ let g:closetag_emptyTags_caseSensitive = 1
 repo = 'tpope/vim-surround'
 
 # Cursor
+# [[plugins]]
+# repo = 'easymotion/vim-easymotion'
 [[plugins]]
-repo = 'easymotion/vim-easymotion'
+repo = 'skanehira/jumpcursor.vim'
 [[plugins]]
 repo = 't9md/vim-quickhl'
 

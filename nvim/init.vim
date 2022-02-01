@@ -111,7 +111,9 @@ nmap <C-_> <Plug>AirlineSelectPrevTab
 nmap <C-]> <Plug>AirlineSelectNextTab
 
 " vim-easymotion
-nmap <leader>e <Plug>(easymotion-s2)
+" nmap <leader>e <Plug>(easymotion-s2)
+" jumpcursor.vim
+nmap <leader>j <Plug>(jumpcursor-jump)
 
 " vim-quickhl
 nmap <leader>m <Plug>(quickhl-manual-this)
