@@ -55,6 +55,7 @@ set softtabstop=4                  " Number of spaces when indented
 set expandtab                      " Convert tab to space
 set clipboard=unnamed              " Copy to clipboard
 set completeopt=menuone,noinsert   " Control completion window
+set synmaxcol=1500                 " Max column 3000(default) -> 1500
 " set cmdheight=2                    " Display message space
 " set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
