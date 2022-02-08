@@ -49,6 +49,12 @@
   "json.enable": true,
   "json.format.enable": true,
   "svelte.enable-ts-plugin": true,
+  //"svelte.plugin.svelte.format.enable": true,
+  //"svelte.plugin.svelte.format.config.printWidth": 140,
+  //"svelte.plugin.svelte.format.config.singleQuote": true,
+  //"svelte.plugin.svelte.format.config.svelteAllowShorthand": false,
+  //"svelte.plugin.svelte.format.config.svelteBracketNewLine": false,
+  //"svelte.plugin.svelte.format.config.svelteIndentScriptAndStyle": true,
   "vetur.format.defaultFormatterOptions": {
     "prettier": {
       "printWidth": 140,
