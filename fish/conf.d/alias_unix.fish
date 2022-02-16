@@ -13,7 +13,7 @@ alias gp='git pull'
 alias gs='git status'
 
 alias dev='cd ~/work'
-alias mdev='cd /media/psf/Develop'
+alias mdev='cd /media/psf/parallels'
 alias tm1='tmux new-session\; source-file ~/dotfiles/tmux/.tmux.session1.conf'
 alias tm2='tmux new-session\; source-file ~/dotfiles/tmux/.tmux.session2.conf'
 alias tm3='tmux new-session\; source-file ~/dotfiles/tmux/.tmux.session3.conf'
