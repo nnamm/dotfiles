@@ -19,6 +19,10 @@ set smartcase
 " 検索をファイル先頭まで循環しない
 set nowrapscan
 
+set scrolloff=10
+set clipboard=unnamed
+set ideajoinset clipboard+=ideaput
+
 " IdeaVimでベルを鳴らさない
 set visualbell
 set noerrorbells
@@ -47,6 +51,9 @@ nnoremap <leader>ss :split<CR>
 " 画面分割 -> 移動（エディタ部）Keymapで対応
 " Split and Move Right -> ^[
 " Split and Move Down  -> ^:
+
+" Cursor
+nmap 9 $
 
 " Action
 " Quick Documentation -> ctrl + k

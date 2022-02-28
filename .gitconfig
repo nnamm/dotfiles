@@ -3,6 +3,7 @@
 	name = nnamm
 [core]
 	editor = nvim
+	excludesfile = /Users/nnamm/.gitignore_global
 [alias]
 	st = status
 	df = diff
@@ -12,3 +13,11 @@
 	ps = push
 	pl = pull
 	ck = checkout
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Tools/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/nnamm/.stCommitMsg
