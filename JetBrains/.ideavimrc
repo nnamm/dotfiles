@@ -62,6 +62,7 @@ nnoremap gd :action GotoDeclaration<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gt :action QuickTypeDefinition<CR>
 
+nnoremap df :action ActivateProjectToolWindow<CR>
 nnoremap fp :action FindInPath<CR>
 nnoremap ga :action GotoAction<CR>
 
