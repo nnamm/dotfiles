@@ -61,6 +61,8 @@ nmap 9 $
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gt :action QuickTypeDefinition<CR>
+nnoremap g_ :action GotoPreviousError<CR>
+nnoremap g] :action GotoNextError<CR>
 
 nnoremap df :action ActivateProjectToolWindow<CR>
 nnoremap fp :action FindInPath<CR>
@@ -68,6 +70,7 @@ nnoremap ga :action GotoAction<CR>
 
 nnoremap <leader>cp :action CloseProject<CR>
 nnoremap <leader>ct :action CloseActiveTab<CR>
+nnoremap <leader>do :action ShowErrorDescription<CR>
 nnoremap <leader>sp :action Stop<CR>
 " nnoremap <C-]> :action NextTab<CR> Keymapで対応
 " nnoremap <C-_> :action PreviousTab<CR> Keymapで対応
