@@ -1,8 +1,7 @@
-" leaderを設定
 let mapleader = ","
 
 " 検索対象をハイライト
-set hlsearch
+set hlsearch  
 
 " Escの2回押しでハイライト消去
 nnoremap <Esc><Esc> :nohlsearch<CR>
@@ -19,7 +18,10 @@ set smartcase
 " 検索をファイル先頭まで循環しない
 set nowrapscan
 
+" エディタスクロール
 set scrolloff=10
+
+" クリップボード制御
 set clipboard=unnamed
 set ideajoinset clipboard+=ideaput
 
@@ -27,12 +29,15 @@ set ideajoinset clipboard+=ideaput
 set visualbell
 set noerrorbells
 
-" vim-surroundを有効
+" vim-surround有効
 set surround
 
-" vim-easymotionを有効
+" vim-easymotion有効
 set easymotion
 nmap  <leader>e <Plug>(easymotion-s2)
+
+" キー動作
+nmap 9 $
 
 " Tabキー動作
 nnoremap <Tab> >>_
@@ -45,32 +50,31 @@ vnoremap <S-Tab> <gv
 nnoremap x "_x
 vnoremap x "_x
 
-" 画面分割（エディタ部）
+" 画面分割
+" Split and Move Right -> ctrl + @
+" Split and Move Down  -> ctrl + :
 nnoremap <leader>sv :vsplit<CR>
 nnoremap <leader>ss :split<CR>
-" 画面分割 -> 移動（エディタ部）Keymapで対応
-" Split and Move Right -> ^[
-" Split and Move Down  -> ^:
 
-" Cursor
-nmap 9 $
-
-" Action
+" Action - References
 " Quick Documentation -> ctrl + k
-" Quick Definition -> ctrl + j / alt + space
+" Quick Definition    -> ctrl + j
+nnoremap <leader>do :action ShowErrorDescription<CR>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gt :action QuickTypeDefinition<CR>
 nnoremap g_ :action GotoPreviousError<CR>
 nnoremap g] :action GotoNextError<CR>
 
-nnoremap df :action ActivateProjectToolWindow<CR>
-nnoremap fp :action FindInPath<CR>
-nnoremap ga :action GotoAction<CR>
-
+" Action - Project/Window/Tab
+" NextTab      -> ctrl + ]
+" PreviouseTab -> ctrl + [ 
 nnoremap <leader>cp :action CloseProject<CR>
 nnoremap <leader>ct :action CloseActiveTab<CR>
-nnoremap <leader>do :action ShowErrorDescription<CR>
-nnoremap <leader>sp :action Stop<CR>
-" nnoremap <C-]> :action NextTab<CR> Keymapで対応
-" nnoremap <C-_> :action PreviousTab<CR> Keymapで対応
+nnoremap df :action ActivateProjectToolWindow<CR>
+
+" Action - Search Everywhere
+nnoremap fp :action FindInPath<CR>
+nnoremap ga :action GotoAction<CR>
+nnoremap gf :action GotoFile<CR>
+nnoremap na :action NewFile<CR>
