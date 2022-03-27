@@ -1,7 +1,7 @@
 let mapleader = ","
 
 " 検索対象をハイライト
-set hlsearch  
+set hlsearch
 
 " Escの2回押しでハイライト消去
 nnoremap <Esc><Esc> :nohlsearch<CR>
@@ -68,7 +68,7 @@ nnoremap g] :action GotoNextError<CR>
 
 " Action - Project/Window/Tab
 " NextTab      -> ctrl + ]
-" PreviouseTab -> ctrl + [ 
+" PreviouseTab -> ctrl + [
 nnoremap <leader>cp :action CloseProject<CR>
 nnoremap <leader>ct :action CloseActiveTab<CR>
 nnoremap df :action ActivateProjectToolWindow<CR>
