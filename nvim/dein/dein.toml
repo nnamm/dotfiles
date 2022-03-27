@@ -64,6 +64,8 @@ depends = 'fzf'
 # git
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+[[plugins]]
+repo = 'rbong/vim-flog'
 
 # UI
 [[plugins]]
