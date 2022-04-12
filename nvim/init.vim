@@ -56,7 +56,14 @@ set expandtab                      " Convert tab to space
 set clipboard=unnamed              " Copy to clipboard
 set completeopt=menuone,noinsert   " Control completion window
 set synmaxcol=1500                 " Max column 3000(default) -> 1500
-" set cmdheight=2                    " Display message space
+" settings recommended by coc.nvim
+set hidden
+set nobackup
+set nowritebackup
+set updatetime=300
+set shortmess+=c
+set signcolumn=number
+" set cmdheight=2
 " set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 let mapleader = ","
