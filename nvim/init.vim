@@ -63,8 +63,6 @@ set nowritebackup
 set updatetime=300
 set shortmess+=c
 set signcolumn=number
-" set cmdheight=2
-" set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 let mapleader = ","
 nnoremap <silent>ss :split<CR><C-w>j
@@ -118,8 +116,6 @@ tmap <C-o> <C-\><C-n>
 nmap <C-_> <Plug>AirlineSelectPrevTab
 nmap <C-]> <Plug>AirlineSelectNextTab
 
-" vim-easymotion
-" nmap <leader>e <Plug>(easymotion-s2)
 " jumpcursor.vim
 nmap <leader>j <Plug>(jumpcursor-jump)
 
