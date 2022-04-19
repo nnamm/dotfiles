@@ -24,25 +24,19 @@ let g:defx_icons_column_length = 2
 [[plugins]]
 repo = 'kristijanhusak/defx-git'
 
-# Buffer switching
-[[plugins]]
-repo = 'jlanzarotta/bufexplorer'
-
 # Brackets
 [[plugins]]
 repo = 'jiangmiao/auto-pairs'
 [[plugins]]
 repo = 'alvan/vim-closetag'
 hook_add = """
-let g:closetag_filenames = '*.html,*.js,*.jsx,*.ts,*.tsx,*.vue'
+let g:closetag_filenames = '*.html,*.js,*.jsx,*.ts,*.tsx,*.vue,*.svelte'
 let g:closetag_emptyTags_caseSensitive = 1
 """
 [[plugins]]
 repo = 'tpope/vim-surround'
 
 # Cursor
-# [[plugins]]
-# repo = 'easymotion/vim-easymotion'
 [[plugins]]
 repo = 'skanehira/jumpcursor.vim'
 [[plugins]]
