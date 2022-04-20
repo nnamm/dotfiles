@@ -8,14 +8,14 @@ endglobal
 
 # Functional components
 snippet rfc "react functional component" b
-import React, {useState} from "react"
+import { useState } from 'react'
 
 const ${1:`!p snip.rv = snip.basename`} = (${2}) => {
 	return(
 		<div>
 			${3:<p>Body</p>}
 		</div>
-		)
+	)
 }
 
 export default $4`!p snip.rv = snip.basename`
@@ -27,7 +27,7 @@ endsnippet
 snippet usee "useEffect Hook" b
 useEffect(() => {
 	${1:${0}}
-		}${2})
+}${2})
 endsnippet
 snippet usec "useContext Hook" b
 const ${1:context} = useContext(${2})
@@ -49,8 +49,8 @@ snippet user "useRef(defaultValue)" b
 const ${1:ref} = useRef(${2:null})
 endsnippet
 snippet ir "import React"
-import React from "react"
+import React from 'react'
 endsnippet
 snippet irc "import React and Component"
-import React, { Component } from "react"
+import { Component } from 'react'
 endsnippet
