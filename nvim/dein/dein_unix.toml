@@ -5,14 +5,14 @@
 # source $HOME/.cache/dein/repos/github.com/haishanh/night-owl.vim/colors/night-owl.vim
 # """
 
-[[plugins]]
-repo = 'EdenEast/nightfox.nvim'
-hook_add = """
-colorscheme nightfox
-"""
-
 # [[plugins]]
-# repo = 'morhetz/gruvbox'
+# repo = 'EdenEast/nightfox.nvim'
 # hook_add = """
-# source $HOME/.cache/dein/repos/github.com/morhetz/gruvbox/colors/gruvbox.vim
+# colorscheme nightfox
 # """
+
+[[plugins]]
+repo = 'morhetz/gruvbox'
+hook_add = """
+source $HOME/.cache/dein/repos/github.com/morhetz/gruvbox/colors/gruvbox.vim
+"""
