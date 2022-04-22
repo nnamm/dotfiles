@@ -5,14 +5,6 @@ repo = 'Shougo/dein.vim'
 hook_add = """
 """
 
-# File explorer - defx
-[[plugins]]
-repo = 'Shougo/defx.nvim'
-depends = ['defx-git', 'defx-icons']
-hook_add = """
-source $HOME/.config/nvim/plugins/defx.rc.vim
-let g:python3_host_prog = '$HOME/.pyenv/shims/python3'
-"""
 # Icon display on defx
 [[plugins]]
 repo = 'kristijanhusak/defx-icons'
@@ -23,6 +15,14 @@ let g:defx_icons_column_length = 2
 # Git display on defx
 [[plugins]]
 repo = 'kristijanhusak/defx-git'
+# File explorer - defx
+[[plugins]]
+repo = 'Shougo/defx.nvim'
+depends = ['defx-git', 'defx-icons']
+hook_add = """
+source $HOME/.config/nvim/plugins/defx.rc.vim
+let g:python3_host_prog = '$HOME/.pyenv/shims/python3'
+"""
 
 # Brackets
 [[plugins]]
