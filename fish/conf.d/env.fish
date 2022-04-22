@@ -14,7 +14,7 @@ set -x PYTHONDONTWRITEBYTECODE 1
 
 # pyenv
 set -x PATH $HOME/.pyenv/bin $PATH
-status is-interactive; and pyenv init --path | source
+status --is-interactive; and pyenv init --path | source
 
 # Poetry
 set -x PATH $HOME/.poetry/bin $PATH
@@ -32,4 +32,4 @@ status --is-interactive; and source (nodenv init -|psub)
 
 # Deno
 set -x DENO_INSTALL $HOME/.deno
-set -x PATH $DENO_INSTALL/bin:$PATH
+set -x PATH $DENO_INSTALL/bin $PATH
