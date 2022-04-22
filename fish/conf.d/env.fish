@@ -29,3 +29,7 @@ set -x PATH $HOME/.local/bin $PATH
 # nodenv
 set -x PATH $HOME/.nodenv/bin $PATH
 status --is-interactive; and source (nodenv init -|psub)
+
+# Deno
+set -x DENO_INSTALL $HOME/.deno
+set -x PATH $DENO_INSTALL/bin:$PATH
