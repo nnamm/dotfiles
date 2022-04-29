@@ -1,15 +1,20 @@
 # Theme color - macOS
+# [[plugins]]
+# repo = 'cocopon/iceberg.vim'
+# hook_add = """
+# source $HOME/.cache/dein/repos/github.com/cocopon/iceberg.vim/colors/iceberg.vim
+# """
+
 [[plugins]]
-repo = 'cocopon/iceberg.vim'
+repo = 'arcticicestudio/nord-vim'
 hook_add = """
-source $HOME/.cache/dein/repos/github.com/cocopon/iceberg.vim/colors/iceberg.vim
+colorscheme nord
 """
 
 # [[plugins]]
-# repo = 'ayu-theme/ayu-vim'
+# repo = 'morhetz/gruvbox'
 # hook_add = """
-# let g:ayucolor = 'dark'
-# colorscheme ayu
+# source $HOME/.cache/dein/repos/github.com/morhetz/gruvbox/colors/gruvbox.vim
 # """
 
 # [[plugins]]
