@@ -74,12 +74,6 @@ let g:airline#extensions#branch#enabled = 1
 let g:airline_powerline_fonts = 1
 """
 [[plugins]]
-repo = 'vim-airline/vim-airline-themes'
-depends = 'vim-airline'
-hook_add = """
-let g:airline_theme = 'nord'
-"""
-[[plugins]]
 repo = 'ryanoasis/vim-devicons'
 
 # LSP
