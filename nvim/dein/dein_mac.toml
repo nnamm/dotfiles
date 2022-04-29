@@ -17,8 +17,10 @@ colorscheme nord
 # source $HOME/.cache/dein/repos/github.com/morhetz/gruvbox/colors/gruvbox.vim
 # """
 
-# [[plugins]]
-# repo = 'EdenEast/nightfox.nvim'
-# hook_add = """
-# colorscheme nightfox
-# """
+# vim-airline-theme
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+depends = 'vim-airline'
+hook_add = """
+let g:airline_theme = 'nord'
+"""
