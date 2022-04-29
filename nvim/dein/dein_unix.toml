@@ -1,14 +1,14 @@
-# Theme color - Ubuntu/Kubuntu
+# Theme color - Ubuntu
 # [[plugins]]
-# repo = 'haishanh/night-owl.vim'
+# repo = 'cocopon/iceberg.vim'
 # hook_add = """
-# source $HOME/.cache/dein/repos/github.com/haishanh/night-owl.vim/colors/night-owl.vim
+# source $HOME/.cache/dein/repos/github.com/cocopon/iceberg.vim/colors/iceberg.vim
 # """
 
 # [[plugins]]
-# repo = 'EdenEast/nightfox.nvim'
+# repo = 'arcticicestudio/nord-vim'
 # hook_add = """
-# colorscheme nightfox
+# colorscheme nord
 # """
 
 [[plugins]]
@@ -16,3 +16,9 @@ repo = 'morhetz/gruvbox'
 hook_add = """
 source $HOME/.cache/dein/repos/github.com/morhetz/gruvbox/colors/gruvbox.vim
 """
+
+# [[plugins]]
+# repo = 'EdenEast/nightfox.nvim'
+# hook_add = """
+# colorscheme nightfox
+# """
