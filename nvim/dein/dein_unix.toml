@@ -1,9 +1,9 @@
 # Theme color - Ubuntu
-# [[plugins]]
-# repo = 'cocopon/iceberg.vim'
-# hook_add = """
-# source $HOME/.cache/dein/repos/github.com/cocopon/iceberg.vim/colors/iceberg.vim
-# """
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+hook_add = """
+source $HOME/.cache/dein/repos/github.com/cocopon/iceberg.vim/colors/iceberg.vim
+"""
 
 # [[plugins]]
 # repo = 'arcticicestudio/nord-vim'
@@ -11,16 +11,16 @@
 # colorscheme nord
 # """
 
-[[plugins]]
-repo = 'morhetz/gruvbox'
-hook_add = """
-source $HOME/.cache/dein/repos/github.com/morhetz/gruvbox/colors/gruvbox.vim
-"""
+# [[plugins]]
+# repo = 'morhetz/gruvbox'
+# hook_add = """
+# source $HOME/.cache/dein/repos/github.com/morhetz/gruvbox/colors/gruvbox.vim
+# """
 
 # vim-airline-theme
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 depends = 'vim-airline'
 hook_add = """
-let g:airline_theme = 'gruvbox'
+let g:airline_theme = 'iceberg'
 """
