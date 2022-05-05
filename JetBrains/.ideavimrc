@@ -59,7 +59,7 @@ nnoremap <leader>ss :split<CR>
 " Action - References
 " Quick Documentation -> ctrl + k
 " Quick Definition    -> ctrl + j
-nnoremap <leader>do :action ShowErrorDescription<CR>
+nnoremap <leader><space> :action ShowErrorDescription<CR>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gt :action QuickTypeDefinition<CR>
