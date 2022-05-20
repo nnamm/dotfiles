@@ -140,6 +140,8 @@ nmap <LocalLeader><F11> <Plug>VimspectorUpFrame
 nmap <LocalLeader><F12> <Plug>VimspectorDownFrame
 
 " autocmd ------------------------------------------------------------
+autocmd FileType c               setlocal ts=2 sw=0 et
+autocmd FileType cpp             setlocal ts=2 sw=0 et
 autocmd FileType css             setlocal ts=2 sw=0 et
 autocmd FileType html            setlocal ts=2 sw=0 et
 autocmd FileType javascript      setlocal ts=2 sw=0 et

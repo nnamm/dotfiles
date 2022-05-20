@@ -47,6 +47,7 @@ let g:coc_snippet_prev = '<C-z>'
 " Extensions
 let g:coc_global_extensions = [
   \ '@yaegassy/coc-tailwindcss3',
+  \ 'coc-clangd',
   \ 'coc-css',
   \ 'coc-docker',
   \ 'coc-eslint',
