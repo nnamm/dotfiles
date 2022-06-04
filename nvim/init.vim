@@ -156,3 +156,9 @@ autocmd FileType vue             setlocal ts=2 sw=0 et
 autocmd FileType python let b:coc_root_patterns = ['.git', '.env', 'venv', '.venv', 'setup.cfg', 'setup.py', 'pyproject.toml']
 autocmd BufWrite *.py :silent call CocAction('runCommand', 'python.sortImports')
 autocmd BufWrite *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
+
+" Restore cursor setting ---------------------------------------------
+augroup RestoreCursorShapeOnExit
+  autocmd!
+  autocmd VimLeave * set guicursor=a:hor20
+augroup END
