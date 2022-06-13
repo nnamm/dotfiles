@@ -71,6 +71,7 @@ nnoremap g] :action GotoNextError<CR>
 " PreviouseTab -> ctrl + [
 nnoremap <leader>cp :action CloseProject<CR>
 nnoremap <leader>ct :action CloseActiveTab<CR>
+nnoremap <leader>to :action ActivateTODOToolWindow<CR>
 nnoremap df :action ActivateProjectToolWindow<CR>
 
 " Action - Search Everywhere

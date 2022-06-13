@@ -13,6 +13,8 @@
 	ps = push
 	pl = pull
 	ck = checkout
+[init]
+	defaultBranch = main
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
