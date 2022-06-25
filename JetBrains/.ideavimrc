@@ -16,7 +16,10 @@ set ignorecase
 set smartcase
 
 " 検索をファイル先頭まで循環しない
-set nowrapscan
+"set nowrapscan
+
+" 行を折り返さない
+set nowrap
 
 " エディタスクロール
 set scrolloff=10
@@ -36,8 +39,14 @@ set surround
 set easymotion
 nmap  <leader>j <Plug>(easymotion-s2)
 
-" キー動作
+" カーソル動作
 nmap 9 $
+" once 'nowrap' is disabled, enable the following settings
+" nmap gj gj<SID>g
+" nmap gk gk<SID>g
+" nnoremap <script> <SID>gj gj<SID>g
+" nnoremap <script> <SID>gk gk<SID>g
+" nmap <SID>g <Nop>
 
 " Tabキー動作
 nnoremap <Tab> >>_

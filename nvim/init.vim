@@ -42,7 +42,7 @@ set hlsearch                       " Highlight search text
 set incsearch                      " Incremental search
 set ignorecase                     " Do not distinguish between upper & lower case when searching
 set smartcase                      " If it contains capital letters, distinguish them
-set nowrapscan                     " Do not cycle the searching
+"set nowrapscan                     " Do not cycle the searching
 set cursorline                     " Highlight a current line
 set wildmenu                       " Command completion
 set wildmode=longest:full          " Enable file name completion
@@ -56,7 +56,7 @@ set expandtab                      " Convert tab to space
 set clipboard=unnamed              " Copy to clipboard
 set completeopt=menuone,noinsert   " Control completion window
 set synmaxcol=1500                 " Max column 3000(default) -> 1500
-" settings recommended by coc.nvim
+" the following 6settings are recommended by coc.nvim
 set hidden
 set nobackup
 set nowritebackup
@@ -77,6 +77,12 @@ inoremap <C-p> <UP>
 inoremap <C-n> <DOWN>
 inoremap <C-d> <DEL>
 nmap 9 $
+" once 'nowrap' is disabled, enable the following settings
+" nmap gj gj<SID>g
+" nmap gk gk<SID>g
+" nnoremap <script> <SID>gj gj<SID>g
+" nnoremap <script> <SID>gk gk<SID>g
+" nmap <SID>g <Nop>
 
 " Tab key action
 nnoremap <Tab> >>_
@@ -92,7 +98,6 @@ vnoremap x "_x
 " Plugin command -----------------------------------------------------
 " coc.nvim -> coc.rc.vim
 " defx.nvim -> defx.rc.vim
-
 " dein.vim
 nnoremap <leader>du :call dein#check_update(v:true)<CR>
 
