@@ -76,7 +76,6 @@ inoremap <C-b> <LEFT>
 inoremap <C-p> <UP>
 inoremap <C-n> <DOWN>
 inoremap <C-d> <DEL>
-nmap 9 $
 " once 'nowrap' is disabled, enable the following settings
 " nmap gj gj<SID>g
 " nmap gk gk<SID>g

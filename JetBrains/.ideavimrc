@@ -40,7 +40,6 @@ set easymotion
 nmap  <leader>j <Plug>(easymotion-s2)
 
 " カーソル動作
-nmap 9 $
 " once 'nowrap' is disabled, enable the following settings
 " nmap gj gj<SID>g
 " nmap gk gk<SID>g
