@@ -16,6 +16,9 @@ let g:svelte_indent_style = 0
 """
 
 #--- Plugins for languages ---#
+[[plugins]]
+repo='mattn/vim-sonictemplate'
+
 #--- Python ---#
 [[plugins]]
 repo='pixelneo/vim-python-docstring'
