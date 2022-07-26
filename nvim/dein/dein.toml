@@ -50,7 +50,7 @@ repo = 'tpope/vim-commentary'
 [[plugins]]
 repo = 'junegunn/fzf'
 build = './install --all'
-merged = 0
+merged = false
 [[plugins]]
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
@@ -80,8 +80,7 @@ repo = 'ryanoasis/vim-devicons'
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 rev = 'release'
-on_i = 1
-merged = 0
+merged = false
 hook_add = """
 source $HOME/.config/nvim/plugins/coc.rc.vim
 """
