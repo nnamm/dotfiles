@@ -114,6 +114,7 @@ nmap <silent><leader>pm :PreviewMarkdown<CR>
 " test.vim
 nmap <silent><leader>t :TestNearest<CR>
 nmap <silent><leader>T :TestFile<CR>
+nmap <silent><leader>a :TestSuite<CR>
 tmap <C-o> <C-\><C-n>
 
 " vim-airline
