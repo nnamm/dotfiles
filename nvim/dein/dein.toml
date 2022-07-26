@@ -94,3 +94,7 @@ let g:UltiSnipsJumpForwardTrigger='<Nop>'
 let g:UltiSnipsJumpBackwardTrigger='<Nop>'
 let g:ultisnips_python_style = 'google'
 """
+
+# Template
+[[plugins]]
+repo='mattn/vim-sonictemplate'
