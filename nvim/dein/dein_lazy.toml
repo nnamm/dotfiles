@@ -42,8 +42,9 @@ let g:vimspector_install_gadgets = ['debugpy', 'delve', 'vscode-node']
 #--- Test runner ---#
 [[plugins]]
 repo = 'janko-m/vim-test'
-on_ft = ['python']
+on_ft = ['python', 'go']
 hook_add = """
 let g:test#strategy = 'neovim'
 let g:test#python#runner = 'pytest'
+let g:test#go#runner = 'gotest'
 """
