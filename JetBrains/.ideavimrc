@@ -1,44 +1,42 @@
+" General ------------------------------------------------------------
 let mapleader = ","
-
 " 検索対象をハイライト
 set hlsearch
-
 " Escの2回押しでハイライト消去
 nnoremap <Esc><Esc> :nohlsearch<CR>
-
 " インクリメンタル検索
 set incsearch
-
 " 検索するときに大文字小文字を区別しない
 set ignorecase
-
 " 検索時に大文字を含んでいたら大/小を区別
 set smartcase
-
 " 検索をファイル先頭まで循環しない
 "set nowrapscan
-
 " 行を折り返さない
 set nowrap
-
 " エディタスクロール
 set scrolloff=10
-
 " クリップボード制御
 set clipboard=unnamed
 set ideajoinset clipboard+=ideaput
-
 " IdeaVimでベルを鳴らさない
 set visualbell
 set noerrorbells
 
-" vim-surround有効
+
+" Plugin -------------------------------------------------------------
+set commentary
+set easymotion
+set NERDTree
 set surround
 
-" vim-easymotion有効
-set easymotion
-nmap  <leader>j <Plug>(easymotion-s2)
+" vim-easymotion
+nmap <leader>j <Plug>(easymotion-s2)
+" NERDTree
+nmap df :NERDTree<CR>
 
+
+" Cursor -------------------------------------------------------------
 " カーソル動作
 " once 'nowrap' is disabled, enable the following settings
 " nmap gj gj<SID>g
@@ -64,7 +62,9 @@ vnoremap x "_x
 nnoremap <leader>sv :vsplit<CR>
 nnoremap <leader>ss :split<CR>
 
-" Action - References
+
+" Action -------------------------------------------------------------
+" References
 " Quick Documentation -> ctrl + k
 " Quick Definition    -> ctrl + j
 nnoremap <leader><space> :action ShowErrorDescription<CR>
@@ -74,7 +74,7 @@ nnoremap gt :action QuickTypeDefinition<CR>
 nnoremap g_ :action GotoPreviousError<CR>
 nnoremap g] :action GotoNextError<CR>
 
-" Action - Project/Window/Tab
+" Project/Window/Tab
 " NextTab      -> ctrl + ]
 " PreviouseTab -> ctrl + [
 nnoremap <leader>cp :action CloseProject<CR>
@@ -82,7 +82,7 @@ nnoremap <leader>ct :action CloseActiveTab<CR>
 nnoremap <leader>to :action ActivateTODOToolWindow<CR>
 nnoremap df :action ActivateProjectToolWindow<CR>
 
-" Action - Search Everywhere
+" Search Everywhere
 nnoremap fp :action FindInPath<CR>
 nnoremap ga :action GotoAction<CR>
 nnoremap gf :action GotoFile<CR>
