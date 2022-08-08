@@ -19,7 +19,7 @@ alias dcc='docker-compose'
 
 alias dev='cd ~/Develop'
 alias mdev='cd ~/Develop/MyProject'
-alias ndev='ssh ndev_ubuntu'
+alias ndev='ssh kubuntu'
 alias cld='cd /Users/nnamm/Library/Mobile\ Documents/com~apple~CloudDocs/'
 alias tm1='tmux new-session\; source-file ~/dotfiles/tmux/.tmux.session1.conf'
 alias tm2='tmux new-session\; source-file ~/dotfiles/tmux/.tmux.session2.conf'

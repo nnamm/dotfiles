@@ -73,8 +73,8 @@ vnoremap v ^$h
 " cursor
 inoremap <C-f> <RIGHT>
 inoremap <C-b> <LEFT>
-inoremap <C-p> <UP>
-inoremap <C-n> <DOWN>
+" inoremap <C-p> <UP>
+" inoremap <C-n> <DOWN>
 inoremap <C-d> <DEL>
 " once 'nowrap' is disabled, enable the following settings
 " nmap gj gj<SID>g
