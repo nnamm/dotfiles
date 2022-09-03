@@ -66,13 +66,14 @@ nnoremap <leader>ss :split<CR>
 " Action -------------------------------------------------------------
 " References
 " Quick Documentation -> ctrl + k
-" Quick Definition    -> ctrl + j
+" Quick Definition    -> ctrl + y
+nnoremap <C-j> :action GotoNextError<CR>
 nnoremap <leader><space> :action ShowErrorDescription<CR>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gt :action QuickTypeDefinition<CR>
-nnoremap g_ :action GotoPreviousError<CR>
-nnoremap g] :action GotoNextError<CR>
+" nnoremap g_ :action GotoPreviousError<CR>
+" nnoremap g] :action GotoNextError<CR>
 
 " Project/Window/Tab
 " NextTab      -> ctrl + ]
