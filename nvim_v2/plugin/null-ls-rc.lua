@@ -6,11 +6,11 @@ if (not status) then return end
 --      from https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/doc
 local sources = {
   -- Python
-  null_ls.builtins.diagnostics.mypy,
-  null_ls.builtins.diagnostics.pylint,
-  null_ls.builtins.diagnostics.pyproject_flake8,
-  null_ls.builtins.formatting.black,
-  null_ls.builtins.formatting.isort,
+  null_ls.builtins.diagnostics.mypy.with({ prefer_local = 'true' }),
+  null_ls.builtins.diagnostics.pylint.with({ prefer_local = 'true' }),
+  null_ls.builtins.diagnostics.pyproject_flake8.with({ prefer_local = 'true' }),
+  null_ls.builtins.formatting.black.with({ prefer_local = 'true' }),
+  null_ls.builtins.formatting.isort.with({ prefer_local = 'true' }),
   -- C/C++
   --null_ls.builtins.formatting.clang_format,
   -- TypeScript
