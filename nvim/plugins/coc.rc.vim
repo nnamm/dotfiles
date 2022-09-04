@@ -25,8 +25,9 @@ nmap <silent>gd <Plug>(coc-definition)
 nmap <silent>gi <Plug>(coc-implementation)
 nmap <silent>gr <Plug>(coc-references)
 nmap <silent>gt <Plug>(coc-type-definition)
-nmap <silent>g_ <Plug>(coc-diagnostic-prev)
-nmap <silent>g] <Plug>(coc-diagnostic-next)
+" nmap <silent>g_ <Plug>(coc-diagnostic-prev)
+" nmap <silent>g] <Plug>(coc-diagnostic-next)
+nmap <silent><C-j> <Plug>(coc-diagnostic-next)
 nmap <leader>na <Plug>(coc-rename)
 
 " CocList
