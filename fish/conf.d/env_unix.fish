@@ -16,9 +16,6 @@ set -x PYTHONDONTWRITEBYTECODE 1
 set -x PATH $HOME/.pyenv/bin $PATH
 status --is-interactive; and pyenv init --path | source
 
-# Poetry
-set -x PATH $HOME/.poetry/bin $PATH
-
 # Golang
 set -x PATH $HOME/go/bin $PATH
 
