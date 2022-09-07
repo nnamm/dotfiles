@@ -19,9 +19,12 @@ local sources = {
   }),
 }
 
+local nls_utils = require "null-ls.utils"
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
   sources = sources,
+
+  root_dir = nls_utils.root_pattern ".git",
 
   -- Ref: https://github.com/jose-elias-alvarez/null-ls.nvim/wiki/Formatting-on-save
   -- TODO I want to enable it only for Python files.
