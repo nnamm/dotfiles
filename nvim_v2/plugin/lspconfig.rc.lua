@@ -136,6 +136,15 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities,
 }
 
+-- html
+nvim_lsp.html.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    "editor.Tabsize" == 2,
+  }
+}
+
 -- Lua
 -- Use mason.nvim insted forLSP loading
 nvim_lsp.sumneko_lua.setup {
