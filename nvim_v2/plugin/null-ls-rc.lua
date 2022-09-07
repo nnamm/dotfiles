@@ -5,14 +5,17 @@ if (not status) then return end
 --      https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTIN_CONFIG.md
 --      from https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/doc
 local sources = {
-  -- Python
+  -- Python: linter & checker
   null_ls.builtins.diagnostics.mypy.with({ prefer_local = 'true' }),
   null_ls.builtins.diagnostics.pylint.with({ prefer_local = 'true' }),
   null_ls.builtins.diagnostics.pyproject_flake8.with({ prefer_local = 'true' }),
+  -- Python: formatter
   null_ls.builtins.formatting.black.with({ prefer_local = 'true' }),
   null_ls.builtins.formatting.isort.with({ prefer_local = 'true' }),
+
   -- C/C++
   --null_ls.builtins.formatting.clang_format,
+  
   -- TypeScript
   null_ls.builtins.diagnostics.eslint_d.with({
     diagnostics_format = '[eslint] #{m}\n(#{c})'
