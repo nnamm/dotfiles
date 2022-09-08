@@ -5,6 +5,7 @@ if (not status) then return end
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
   --Enable completion triggered by <c-x><c-o>
@@ -88,7 +89,6 @@ nvim_lsp.gopls.setup {
     }
   }
 }
---nvim_lsp.golangci_lint_ls.setup {}
 
 -- format on save
 -- Ref: https://github.com/golang/tools/blob/master/gopls/doc/vim.md#neovim-config
@@ -113,14 +113,6 @@ vim.cmd([[autocmd BufWritePre *.go lua Go_org_imports()]])
 nvim_lsp.pyright.setup {
   on_attach = on_attach,
   capabilities = capabilities,
-  --[[ For Poeetry projects
-  on_new_config = function(config, root_dir)
-    local env = vim.trim(vim.fn.system('cd "' .. root_dir .. '"; poetry env info -p 2>/dev/null'))
-    if string.len(env) > 0 then
-      config.settings.python.pythonPath = env .. '/bin/python'
-    end
-  end
-  ]] --
 }
 
 -- C/C++
@@ -139,9 +131,12 @@ nvim_lsp.tsserver.setup {
 nvim_lsp.html.setup {
   on_attach = on_attach,
   capabilities = capabilities,
-  settings = {
-    "editor.Tabsize" == 2,
-  }
+}
+
+-- css
+nvim_lsp.cssls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
 }
 
 -- Lua
