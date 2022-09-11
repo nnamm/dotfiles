@@ -30,6 +30,7 @@ packer.startup(function(use)
   use 'saadparwaiz1/cmp_luasnip' -- Completion for LuaSnip
   use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
+  use 'ziglang/zig.vim' -- File detection and syntax highlighting for zig
 
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'

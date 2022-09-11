@@ -16,15 +16,14 @@ set -x PYTHONDONTWRITEBYTECODE 1
 set -x PATH $HOME/.pyenv/bin $PATH
 status --is-interactive; and pyenv init --path | source
 
-# poetry
-set -x PATH $HOME/.local/bin $PATH
-
 # Golang
 set -x PATH $HOME/go/bin $PATH
 
-# Rust / rust-analyzer
-# set -x PATH $HOME/.cargo/bin $PATH
-# set -x PATH $HOME/.local/bin $PATH
+# Rust
+set -x PATH $HOME/.cargo/bin $PATH
+
+# poetry / zls / rust-analyzer
+set -x PATH $HOME/.local/bin $PATH
 
 # nodenv
 set -x PATH $HOME/.nodenv/bin $PATH

@@ -115,6 +115,12 @@ nvim_lsp.pyright.setup {
   capabilities = capabilities,
 }
 
+-- zig
+nvim_lsp.zls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
 -- C/C++
 nvim_lsp.clangd.setup {
   on_attach = on_attach,
