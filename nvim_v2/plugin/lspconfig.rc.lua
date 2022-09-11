@@ -121,6 +121,12 @@ nvim_lsp.zls.setup {
   capabilities = capabilities,
 }
 
+-- rust
+nvim_lsp.rust_analyzer.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
 -- C/C++
 nvim_lsp.clangd.setup {
   on_attach = on_attach,
