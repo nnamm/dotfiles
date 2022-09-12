@@ -52,9 +52,19 @@ inoremap <S-Tab> <C-D>
 vnoremap <Tab> >gv
 vnoremap <S-Tab> <gv
 
-" x キー削除でデフォルトレジスタに入れない
+" Do not yank with x
 nnoremap x "_x
 vnoremap x "_x
+
+" Increment/decrement
+nnoremap + <C-a>
+nnoremap - <C-x>
+
+" Delete a word backwards
+nnoremap dw vb"_d
+
+" Select all
+nnoremap <C-a> gg<S-v>G<CR>
 
 " 画面分割
 " Split and Move Right -> ctrl + @
