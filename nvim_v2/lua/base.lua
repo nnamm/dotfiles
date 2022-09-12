@@ -51,4 +51,3 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
     vim.opt.tabstop = 4
   end
 })
-
