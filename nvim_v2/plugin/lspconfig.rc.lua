@@ -30,12 +30,6 @@ local on_attach = function(client, bufnr)
   end
 end
 
--- For cancel on_attach func
--- Formatting uses null-ls.nvim instead ???
---local no_attach = function(client)
---  client.resolved_capabilities.document_formatting = false
---end
-
 -- Diagnostic settings
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
