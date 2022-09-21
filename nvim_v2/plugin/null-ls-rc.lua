@@ -14,6 +14,8 @@ local sources = {
   null_ls.builtins.formatting.black.with({ extra_args = { "--fast" } }),
   null_ls.builtins.formatting.isort,
   null_ls.builtins.formatting.prettierd,
+  null_ls.builtins.formatting.rustfmt,
+  null_ls.builtins.formatting.zigfmt,
   -- null_ls.builtins.formatting.djlint,
   -- null_ls.builtins.formatting.clang_format,
 }
