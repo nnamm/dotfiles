@@ -21,13 +21,13 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'gt', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
 
   -- Format on save
-  if client.server_capabilities.documentFormattingProvider then
-    vim.api.nvim_create_autocmd("BufWritePre", {
-      group = vim.api.nvim_create_augroup("Format", { clear = true }),
-      buffer = bufnr,
-      callback = function() vim.lsp.buf.formatting_seq_sync() end
-    })
-  end
+  -- if client.server_capabilities.documentFormattingProvider then
+  --   vim.api.nvim_create_autocmd("BufWritePre", {
+  --     group = vim.api.nvim_create_augroup("Format", { clear = true }),
+  --     buffer = bufnr,
+  --     callback = function() vim.lsp.buf.formatting_seq_sync() end
+  --   })
+  -- end
 end
 
 -- Diagnostic settings
@@ -71,37 +71,25 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(
 nvim_lsp.gopls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
-  -- cmd = { "gopls", "serve" },
-  -- filetypes = { "go", "gomod" },
-  -- root_dir = nvim_lsp.util.root_pattern("go.work", "go.mod", ".git"),
-  -- settings = {
-  --   gopls = {
-  --     analyses = {
-  --       unusedparams = true,
-  --     },
-  --     staticcheck = true,
-  --   }
-  -- }
 }
 
 -- format on save
 -- Ref: https://github.com/golang/tools/blob/master/gopls/doc/vim.md#neovim-config
 --      from https://zenn.dev/knsh14/articles/nvim-gopls-2021-01-16
-function Go_org_imports(wait_ms)
-  local params = vim.lsp.util.make_range_params()
-  params.context = { only = { "source.organizeImports" } }
-  local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params, wait_ms)
-  for cid, res in pairs(result or {}) do
-    for _, r in pairs(res.result or {}) do
-      if r.edit then
-        local enc = (vim.lsp.get_client_by_id(cid) or {}).offset_encoding or "utf-16"
-        vim.lsp.util.apply_workspace_edit(r.edit, enc)
-      end
-    end
-  end
-end
-
-vim.cmd([[autocmd BufWritePre *.go lua Go_org_imports()]])
+-- function Go_org_imports(wait_ms)
+--   local params = vim.lsp.util.make_range_params()
+--   params.context = { only = { "source.organizeImports" } }
+--   local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params, wait_ms)
+--   for cid, res in pairs(result or {}) do
+--     for _, r in pairs(res.result or {}) do
+--       if r.edit then
+--         local enc = (vim.lsp.get_client_by_id(cid) or {}).offset_encoding or "utf-16"
+--         vim.lsp.util.apply_workspace_edit(r.edit, enc)
+--       end
+--     end
+--   end
+-- end
+-- vim.cmd([[autocmd BufWritePre *.go lua Go_org_imports()]])
 
 -- Python
 nvim_lsp.pyright.setup {
@@ -145,8 +133,13 @@ nvim_lsp.cssls.setup {
   capabilities = capabilities,
 }
 
+-- Docker
+nvim_lsp.dockerls.setup {
+  capabilities = capabilities,
+}
+
 -- Lua
--- Use mason.nvim insted forLSP loading
+-- Use mason.nvim insted for LSP loading
 nvim_lsp.sumneko_lua.setup {
   on_attach = on_attach,
   capabilities = capabilities,
