@@ -75,7 +75,7 @@ nnoremap <leader>ss :split<CR>
 
 " Action -------------------------------------------------------------
 " References
-" Quick Documentation -> ctrl + k
+" Quick Documentation -> ctrl + k / shift + k
 " Quick Definition    -> ctrl + y
 nnoremap <C-j> :action GotoNextError<CR>
 nnoremap <leader><space> :action ShowErrorDescription<CR>
