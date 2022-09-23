@@ -2,6 +2,7 @@ local status, cmp = pcall(require, "cmp")
 if (not status) then return end
 if (not cmp) then return end
 local lspkind = require 'lspkind'
+local luasnip = require 'luasnip'
 
 cmp.setup({
   snippet = {
@@ -23,6 +24,13 @@ cmp.setup({
       behavior = cmp.ConfirmBehavior.Replace,
       select = true
     }),
+    ['<C-l>'] = cmp.mapping(function(fallback)
+      if luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      else
+        fallback()
+      end
+    end, { "i", "s" }),
   }),
 
   sources = cmp.config.sources({
