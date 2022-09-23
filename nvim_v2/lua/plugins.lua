@@ -14,7 +14,10 @@ packer.startup(function(use)
   use 'kyazdani42/nvim-web-devicons' -- File icons
   use 'akinsho/nvim-bufferline.lua'
   use 'norcalli/nvim-colorizer.lua'
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+  }
   use 'glepnir/lspsaga.nvim' -- LSP UIs
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
 
@@ -30,7 +33,6 @@ packer.startup(function(use)
   use 'saadparwaiz1/cmp_luasnip' -- Completion for LuaSnip
   use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
-  use 'ziglang/zig.vim' -- File detection and syntax highlighting for zig
 
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
@@ -41,4 +43,8 @@ packer.startup(function(use)
   use 'mattn/vim-sonictemplate'
   use { 'phaazon/hop.nvim', branch = 'v2' }
   use 'terrortylor/nvim-comment'
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
 end)

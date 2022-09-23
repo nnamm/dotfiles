@@ -11,16 +11,21 @@ ts.setup {
     disable = { "python" }, -- For autoindent does not work in *.py
   },
   ensure_installed = {
-    "go",
-    --"python",
-    "tsx",
-    "toml",
-    "fish",
-    "json",
-    "yaml",
+    "c",
+    "cpp",
     "css",
+    "dockerfile",
+    "fish",
+    "go",
     "html",
-    "lua"
+    "json",
+    "lua",
+    --"python",
+    "rust",
+    "toml",
+    "tsx",
+    "yaml",
+    "zig"
   },
   autotag = {
     enable = true,

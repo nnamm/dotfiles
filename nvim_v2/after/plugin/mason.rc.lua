@@ -8,6 +8,7 @@ mason.setup {}
 lspconfig.setup {
   ensure_installed = {
     "lua-language-server",
+    "sumneko_lua"
   },
 }
 
@@ -25,4 +26,4 @@ require 'lspconfig'.sumneko_lua.setup {
     }
   }
 }
-]]--
+]] --
