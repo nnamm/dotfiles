@@ -22,6 +22,7 @@ ts.setup {
     "lua",
     --"python",
     "rust",
+    "sql",
     "toml",
     "tsx",
     "yaml",
