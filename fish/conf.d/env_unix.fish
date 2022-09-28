@@ -18,6 +18,7 @@ status --is-interactive; and pyenv init --path | source
 
 # Golang
 set -x PATH $HOME/go/bin $PATH
+set -x PATH /usr/local/go/bin $PATH
 
 # Rust
 set -x PATH $HOME/.cargo/bin $PATH
