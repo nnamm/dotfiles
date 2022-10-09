@@ -67,13 +67,7 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(
 -- Ref: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 --------------------------------------------------------------------------------------------
 
--- Golang
-nvim_lsp.gopls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
-
--- format on save
+-- format on save for Golang
 -- Ref: https://github.com/golang/tools/blob/master/gopls/doc/vim.md#neovim-config
 --      from https://zenn.dev/knsh14/articles/nvim-gopls-2021-01-16
 -- function Go_org_imports(wait_ms)
@@ -91,55 +85,20 @@ nvim_lsp.gopls.setup {
 -- end
 -- vim.cmd([[autocmd BufWritePre *.go lua Go_org_imports()]])
 
--- Python
-nvim_lsp.pyright.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
-
--- zig
-nvim_lsp.zls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
-
--- rust
-nvim_lsp.rust_analyzer.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
-
--- C/C++
-nvim_lsp.clangd.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
-
--- TypeScript
-nvim_lsp.tsserver.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
-
--- html
-nvim_lsp.html.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
-
--- css
-nvim_lsp.cssls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
+local lsp_servers = { 'gopls', 'pyright', 'zls', 'rust_analyzer', 'clangd', 'tsserver', 'html', 'cssls' }
+for _, lsp in pairs(lsp_servers) do
+  nvim_lsp[lsp].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
+end
 
 -- Docker
 nvim_lsp.dockerls.setup {
   capabilities = capabilities,
 }
 
--- Lua
--- Use mason.nvim insted for LSP loading
+-- Lua (Use mason.nvim insted for LSP loading)
 nvim_lsp.sumneko_lua.setup {
   on_attach = on_attach,
   capabilities = capabilities,
