@@ -37,7 +37,8 @@ null_ls.setup({
         buffer = bufnr,
         callback = function()
           -- vim.lsp.buf.formatting_sync()
-          vim.lsp.buf.formatting_seq_sync()
+          -- vim.lsp.buf.formatting_seq_sync()
+          vim.lsp.buf.format()
         end,
       })
     end
