@@ -10,6 +10,7 @@
 	co = commit
 	cl = clone
 	br = branch
+	ad = add
 	ps = push
 	pl = pull
 	ck = checkout
