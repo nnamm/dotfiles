@@ -3,8 +3,8 @@ if (not status) then return end
 
 local sources = {
   -- diagnostics
-  null_ls.builtins.diagnostics.mypy, -- Requires machine resources to use
-  null_ls.builtins.diagnostics.pylint, -- Requires machine resources to use
+  -- null_ls.builtins.diagnostics.mypy, -- Requires machine resources to use
+  -- null_ls.builtins.diagnostics.pylint, -- Requires machine resources to use
   null_ls.builtins.diagnostics.pyproject_flake8,
   -- null_ls.builtins.diagnostics.eslint_d.with({
   --   diagnostics_format = '[eslint] #{m}\n(#{c})'
