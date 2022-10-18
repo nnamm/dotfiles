@@ -85,7 +85,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(
 -- end
 -- vim.cmd([[autocmd BufWritePre *.go lua Go_org_imports()]])
 
-local lsp_servers = { 'gopls', 'pyright', 'zls', 'rust_analyzer', 'clangd', 'tsserver', 'html', 'cssls' }
+local lsp_servers = { 'gopls', 'pyright', 'zls', 'rust_analyzer', 'clangd', 'tsserver', 'html', 'cssls', 'yamlls' }
 for _, lsp in pairs(lsp_servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
@@ -98,7 +98,7 @@ nvim_lsp.dockerls.setup {
   capabilities = capabilities,
 }
 
--- Lua (Use mason.nvim insted for LSP loading)
+-- Lua
 nvim_lsp.sumneko_lua.setup {
   on_attach = on_attach,
   capabilities = capabilities,
