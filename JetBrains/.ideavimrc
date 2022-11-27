@@ -19,6 +19,7 @@ set scrolloff=10
 " クリップボード制御
 set clipboard=unnamed
 set ideajoinset clipboard+=ideaput
+set clipboard+=ideaput
 " IdeaVimでベルを鳴らさない
 set visualbell
 set noerrorbells
