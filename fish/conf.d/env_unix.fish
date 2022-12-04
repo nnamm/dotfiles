@@ -21,10 +21,10 @@ set -x PATH $HOME/go/bin $PATH
 set -x PATH /usr/local/go/bin $PATH
 
 # Rust
-set -x PATH $HOME/.cargo/bin $PATH
+#set -x PATH $HOME/.cargo/bin $PATH
 
 # poetry / zls / rust-analyzer
-set -x PATH $HOME/.local/bin $PATH
+#set -x PATH $HOME/.local/bin $PATH
 
 # nodenv
 set -x PATH $HOME/.nodenv/bin $PATH

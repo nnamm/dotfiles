@@ -20,7 +20,7 @@ local sources = {
   null_ls.builtins.formatting.zigfmt,
   null_ls.builtins.formatting.lua_format,
   -- null_ls.builtins.formatting.djlint,
-  -- null_ls.builtins.formatting.clang_format,
+  null_ls.builtins.formatting.clang_format,
 }
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
