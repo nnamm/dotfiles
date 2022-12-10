@@ -18,9 +18,12 @@ status --is-interactive; and pyenv init --path | source
 
 # Golang
 set -x PATH $HOME/go/bin $PATH
+#set -x PATH /usr/local/go/bin $PATH
 
-# Rust / rust-analyzer
+# Rust
 set -x PATH $HOME/.cargo/bin $PATH
+
+# poetry / zls / rust-analyzer
 set -x PATH $HOME/.local/bin $PATH
 
 # nodenv
