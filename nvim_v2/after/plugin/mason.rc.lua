@@ -5,8 +5,4 @@ if (not status2) then return end
 
 mason.setup {}
 
-lspconfig.setup {
-  ensure_installed = {
-    "sumneko_lua"
-  },
-}
+lspconfig.setup {ensure_installed = {"sumneko_lua"}}

@@ -16,7 +16,9 @@ packer.startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
   use {
     'nvim-treesitter/nvim-treesitter',
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+    run = function()
+      require('nvim-treesitter.install').update({with_sync = true})
+    end
   }
   use 'glepnir/lspsaga.nvim' -- LSP UIs
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
@@ -41,10 +43,10 @@ packer.startup(function(use)
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- For git blame & browser
   use 'mattn/vim-sonictemplate'
-  use { 'phaazon/hop.nvim', branch = 'v2' }
+  use {'phaazon/hop.nvim', branch = 'v2'}
   use 'terrortylor/nvim-comment'
   use({
     "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
+    run = function() vim.fn["mkdp#util#install"]() end
   })
 end)

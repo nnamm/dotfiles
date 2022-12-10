@@ -2,13 +2,10 @@ local status, ts = pcall(require, "nvim-treesitter.configs")
 if (not status) then return end
 
 ts.setup {
-  highlight = {
-    enable = true,
-    disable = {},
-  },
+  highlight = {enable = true, disable = {}},
   indent = {
     enable = true,
-    disable = { "python" }, -- For autoindent does not work in *.py
+    disable = {"python"} -- For autoindent does not work in *.py
   },
   ensure_installed = {
     "c",
@@ -20,7 +17,7 @@ ts.setup {
     "html",
     "json",
     "lua",
-    --"python",
+    -- "python",
     "rust",
     "sql",
     "toml",
@@ -28,10 +25,8 @@ ts.setup {
     "yaml",
     "zig"
   },
-  autotag = {
-    enable = true,
-  }
+  autotag = {enable = true}
 }
 
-local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
+local parser_config = require"nvim-treesitter.parsers".get_parser_configs()
+parser_config.tsx.filetype_to_parsername = {"javascript", "typescript.tsx"}

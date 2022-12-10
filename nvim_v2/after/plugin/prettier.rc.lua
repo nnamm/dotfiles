@@ -3,7 +3,7 @@ if (not status) then return end
 
 prettier.setup {
   bin = 'prettierd',
-  --bin = 'prettier',
+  -- bin = 'prettier',
   filetypes = {
     "css",
     "html",

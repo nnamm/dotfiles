@@ -18,12 +18,12 @@ keymap.set('n', '<C-a>', 'gg<S-v>G')
 
 -- New tab
 keymap.set('n', 'te', ':tabedit ')
-keymap.set('n', 'tn', ':tabnew<CR> ', { silent = true })
-keymap.set('n', 'ss', ':split<CR><C-w>w', { silent = true })
-keymap.set('n', 'sv', ':vsplit<CR><C-w>w', { silent = true })
+keymap.set('n', 'tn', ':tabnew<CR> ', {silent = true})
+keymap.set('n', 'ss', ':split<CR><C-w>w', {silent = true})
+keymap.set('n', 'sv', ':vsplit<CR><C-w>w', {silent = true})
 -- Move tab
---keymap.set('n', '<C-_>', ':bprevious<Return>', { silent = true })
---keymap.set('n', '<C-]>', ':bnext<Return>', { silent = true })
+-- keymap.set('n', '<C-_>', ':bprevious<Return>', { silent = true })
+-- keymap.set('n', '<C-]>', ':bnext<Return>', { silent = true })
 -- Move window
 keymap.set('n', '<Space>', '<C-w>w')
 keymap.set('', 'sh', '<C-w>h')
@@ -37,7 +37,7 @@ keymap.set('n', '<C-w><UP>', '<C-w>+')
 keymap.set('n', '<C-w><DOWN>', '<C-w>-')
 
 -- Clear search highlight
-keymap.set('n', '<ESC><ESC>', ':set nohlsearch<Return>', { silent = true })
+keymap.set('n', '<ESC><ESC>', ':set nohlsearch<Return>', {silent = true})
 
 -- Cursor control
 keymap.set('i', '<C-f>', '<RIGHT>')

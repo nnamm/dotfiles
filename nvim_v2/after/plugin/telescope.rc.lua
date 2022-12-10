@@ -3,20 +3,12 @@ if (not status) then return end
 local actions = require('telescope.actions')
 local builtin = require("telescope.builtin")
 
-local function telescope_buffer_dir()
-  return vim.fn.expand('%:p:h')
-end
+local function telescope_buffer_dir() return vim.fn.expand('%:p:h') end
 
-local fb_actions = require "telescope".extensions.file_browser.actions
+local fb_actions = require"telescope".extensions.file_browser.actions
 
 telescope.setup {
-  defaults = {
-    mappings = {
-      n = {
-        ["q"] = actions.close
-      },
-    },
-  },
+  defaults = {mappings = {n = {["q"] = actions.close}}},
   extensions = {
     -- Ref: https://github.com/nvim-telescope/telescope-file-browser.nvim
     file_browser = {
@@ -36,39 +28,25 @@ telescope.setup {
           ["D"] = fb_actions.remove,
           ["R"] = fb_actions.rename,
           ["u"] = fb_actions.goto_parent_dir,
-          ["/"] = function()
-            vim.cmd('startinsert')
-          end
-        },
-      },
-    },
-  },
+          ["/"] = function() vim.cmd('startinsert') end
+        }
+      }
+    }
+  }
 }
 
 telescope.load_extension("file_browser")
 
-vim.keymap.set('n', ';f',
-  function()
-    builtin.find_files({
-      no_ignore = false,
-      hidden = true
-    })
-  end)
-vim.keymap.set('n', ';r', function()
-  builtin.live_grep()
+vim.keymap.set('n', ';f', function()
+  builtin.find_files({no_ignore = false, hidden = true})
 end)
-vim.keymap.set('n', ';b', function()
-  builtin.buffers()
-end)
-vim.keymap.set('n', ';t', function()
-  builtin.help_tags()
-end)
---vim.keymap.set('n', ';;', function()
+vim.keymap.set('n', ';r', function() builtin.live_grep() end)
+vim.keymap.set('n', ';b', function() builtin.buffers() end)
+vim.keymap.set('n', ';t', function() builtin.help_tags() end)
+-- vim.keymap.set('n', ';;', function()
 --  builtin.resume()
---end)
-vim.keymap.set('n', ';e', function()
-  builtin.diagnostics()
-end)
+-- end)
+vim.keymap.set('n', ';e', function() builtin.diagnostics() end)
 vim.keymap.set("n", "df", function()
   telescope.extensions.file_browser.file_browser({
     path = "%:p:h",
@@ -78,6 +56,6 @@ vim.keymap.set("n", "df", function()
     grouped = true,
     previewer = false,
     initial_mode = "normal",
-    layout_config = { height = 40 }
+    layout_config = {height = 40}
   })
 end)

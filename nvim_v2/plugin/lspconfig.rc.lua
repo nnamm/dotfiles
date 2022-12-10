@@ -8,13 +8,13 @@ local on_attach = function(client, bufnr)
 
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
-  --Enable completion triggered by <c-x><c-o>
+  -- Enable completion triggered by <c-x><c-o>
   buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
   -- Mappings
   -- Ref: https://github.com/neovim/nvim-lspconfig
   --      https://zenn.dev/botamotch/articles/21073d78bc68bf
-  local opts = { noremap = true, silent = true }
+  local opts = {noremap = true, silent = true}
   buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
   buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
@@ -31,36 +31,32 @@ local on_attach = function(client, bufnr)
 end
 
 -- Diagnostic settings
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics, {
-  underline = true,
-  update_in_insert = false,
-  virtual_text = { spacing = 4, prefix = "●" },
-  severity_sort = true
-}
-)
+vim.lsp.handlers["textDocument/publishDiagnostics"] =
+  vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+    underline = true,
+    update_in_insert = false,
+    virtual_text = {spacing = 4, prefix = "●"},
+    severity_sort = true
+  })
 
 -- Diagnostic symbols in the sign column (gutter)
-local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+local signs = {Error = " ", Warn = " ", Hint = " ", Info = " "}
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
-  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+  vim.fn.sign_define(hl, {text = icon, texthl = hl, numhl = ""})
 end
 
 vim.diagnostic.config({
-  virtual_text = {
-    prefix = '●'
-  },
+  virtual_text = {prefix = '●'},
   update_in_insert = true,
   float = {
-    source = "always", -- Or "if_many"
-  },
+    source = "always" -- Or "if_many"
+  }
 })
 
-local capabilities = require('cmp_nvim_lsp').default_capabilities(
-  vim.lsp.protocol.make_client_capabilities()
-)
-
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp
+                                                                    .protocol
+                                                                    .make_client_capabilities())
 
 --------------------------------------------------------------------------------------------
 -- Set up completion using nvim_cmp with LSP source
@@ -85,18 +81,24 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(
 -- end
 -- vim.cmd([[autocmd BufWritePre *.go lua Go_org_imports()]])
 
-local lsp_servers = { 'gopls', 'pyright', 'zls', 'rust_analyzer', 'clangd', 'tsserver', 'html', 'cssls', 'yamlls' }
+local lsp_servers = {
+  'gopls',
+  'pyright',
+  'zls',
+  'rust_analyzer',
+  'clangd',
+  'glslls',
+  'tsserver',
+  'html',
+  'cssls',
+  'yamlls'
+}
 for _, lsp in pairs(lsp_servers) do
-  nvim_lsp[lsp].setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-  }
+  nvim_lsp[lsp].setup {on_attach = on_attach, capabilities = capabilities}
 end
 
 -- Docker
-nvim_lsp.dockerls.setup {
-  capabilities = capabilities,
-}
+nvim_lsp.dockerls.setup {capabilities = capabilities}
 
 -- Lua
 nvim_lsp.sumneko_lua.setup {
@@ -104,12 +106,8 @@ nvim_lsp.sumneko_lua.setup {
   capabilities = capabilities,
   settings = {
     Lua = {
-      diagnostics = {
-        globals = { 'vim' },
-      },
-      workspace = {
-        library = vim.api.nvim_get_runtime_file("", true)
-      }
+      diagnostics = {globals = {'vim'}},
+      workspace = {library = vim.api.nvim_get_runtime_file("", true)}
     }
   }
 }
