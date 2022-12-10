@@ -14,6 +14,7 @@ ts.setup {
     "dockerfile",
     "fish",
     "go",
+    "help",
     "html",
     "json",
     "lua",
@@ -22,6 +23,7 @@ ts.setup {
     "sql",
     "toml",
     "tsx",
+    "vim",
     "yaml",
     "zig"
   },
