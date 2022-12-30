@@ -82,6 +82,7 @@ nnoremap <C-j> :action GotoNextError<CR>
 nnoremap <leader><space> :action ShowErrorDescription<CR>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gi :action GotoImplementation<CR>
+nnoremap gp :action QuickImplementations<CR>
 nnoremap gt :action QuickTypeDefinition<CR>
 " nnoremap g_ :action GotoPreviousError<CR>
 " nnoremap g] :action GotoNextError<CR>
