@@ -90,6 +90,7 @@ nnoremap gt :action QuickTypeDefinition<CR>
 " Project/Window/Tab
 " NextTab      -> ctrl + ]
 " PreviouseTab -> ctrl + [
+nnoremap <leader>ca :action CloseAllEditors<CR>
 nnoremap <leader>cp :action CloseProject<CR>
 nnoremap <leader>ct :action CloseActiveTab<CR>
 nnoremap <leader>to :action ActivateTODOToolWindow<CR>
