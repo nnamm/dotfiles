@@ -1,10 +1,7 @@
 local status, saga = pcall(require, "lspsaga")
 if (not status) then return end
 
-saga.init_lsp_saga {
-  code_action_lightbulb = {enable = false},
-  server_filetype_map = {}
-}
+saga.setup({code_action_lightbulb = {enable = false}, server_filetype_map = {}})
 
 -- Ref: https://github.com/glepnir/lspsaga.nvim
 local opts = {noremap = true, silent = true}
