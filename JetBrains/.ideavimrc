@@ -79,6 +79,11 @@ inoremap <C-b> <LEFT>
 inoremap <C-p> <UP>
 inoremap <C-n> <DOWN>
 
+" Delete
+inoremap <C-d> <DEL>
+nnoremap dw vb"_d
+
+
 " Action -------------------------------------------------------------
 " References
 " Quick Documentation -> ctrl + k / shift + k
