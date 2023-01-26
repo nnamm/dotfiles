@@ -73,6 +73,11 @@ nnoremap <C-a> gg<S-v>G<CR>
 nnoremap <leader>sv :vsplit<CR>
 nnoremap <leader>ss :split<CR>
 
+" Cursor control
+inoremap <C-f> <RIGHT>
+inoremap <C-b> <LEFT>
+inoremap <C-p> <UP>
+inoremap <C-n> <DOWN>
 
 " Action -------------------------------------------------------------
 " References
