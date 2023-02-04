@@ -42,9 +42,15 @@ vim.opt.formatoptions:append{'r'}
 
 -- shiftwidth/tabstop
 vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, {
-  pattern = {"*.go", "*.py"},
+  pattern = {"*.go", "*.py", "*.c", "*.cpp", "*.h", "*.hpp", "*.vert", "*.flag"},
   callback = function()
     vim.opt.shiftwidth = 4
     vim.opt.tabstop = 4
   end
+})
+
+-- GLSL
+vim.api.nvim_create_autocmd({'BufNewFile', 'BufRead'}, {
+  pattern = {"*.vert", "*.flag"},
+  callback = function() vim.opt.filetype = "glsl" end
 })

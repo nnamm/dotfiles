@@ -87,7 +87,7 @@ local lsp_servers = {
   'zls',
   'rust_analyzer',
   'clangd',
-  'glslls',
+  -- 'glslls',
   'tsserver',
   'html',
   'cssls',

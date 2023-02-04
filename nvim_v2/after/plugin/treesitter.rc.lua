@@ -13,6 +13,7 @@ ts.setup {
     "css",
     "dockerfile",
     "fish",
+    "glsl",
     "go",
     "help",
     "html",
