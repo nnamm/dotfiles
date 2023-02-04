@@ -26,8 +26,8 @@ local sources = {
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 ---@diagnostic disable-next-line: redundant-parameter
 null_ls.setup({
+  on_init = function(new_client, _) new_client.offset_encoding = 'utf-8' end,
   sources = sources,
-
   -- Ref: https://github.com/jose-elias-alvarez/null-ls.nvim/wiki/Formatting-on-save
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
