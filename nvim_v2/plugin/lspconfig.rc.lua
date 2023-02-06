@@ -86,7 +86,7 @@ local lsp_servers = {
   'pyright',
   'zls',
   'rust_analyzer',
-  'clangd',
+  -- 'clangd',
   -- 'glslls',
   'tsserver',
   'html',
@@ -96,6 +96,14 @@ local lsp_servers = {
 for _, lsp in pairs(lsp_servers) do
   nvim_lsp[lsp].setup {on_attach = on_attach, capabilities = capabilities}
 end
+
+-- clangd
+nvim_lsp.clangd.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = {"clangd", "--query-driver=/usr/bin/c++"},
+  filetypes = {"c", "cpp", "h", "hpp"}
+}
 
 -- Docker
 nvim_lsp.dockerls.setup {capabilities = capabilities}
