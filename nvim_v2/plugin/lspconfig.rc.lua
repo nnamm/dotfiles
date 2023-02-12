@@ -109,7 +109,7 @@ nvim_lsp.clangd.setup {
 nvim_lsp.dockerls.setup {capabilities = capabilities}
 
 -- Lua
-nvim_lsp.sumneko_lua.setup {
+nvim_lsp.lua_ls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
