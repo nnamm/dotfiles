@@ -24,9 +24,7 @@ lualine.setup {
         'diagnostics',
         sources = {"nvim_diagnostic"},
         symbols = {error = ' ', warn = ' ', info = ' ', hint = ' '}
-      },
-      'encoding',
-      'filetype'
+      }, 'encoding', 'filetype'
     },
     lualine_y = {'progress'},
     lualine_z = {'location'}

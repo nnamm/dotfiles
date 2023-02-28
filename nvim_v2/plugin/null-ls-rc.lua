@@ -11,22 +11,17 @@ local sources = {
   -- }),
 
   -- formatting
-  null_ls.builtins.formatting.gofmt,
-  null_ls.builtins.formatting.goimports,
+  null_ls.builtins.formatting.gofmt, null_ls.builtins.formatting.goimports,
+  null_ls.builtins.formatting.clang_format,
   null_ls.builtins.formatting.black.with({extra_args = {"--fast"}}),
-  null_ls.builtins.formatting.isort,
-  null_ls.builtins.formatting.prettierd,
-  null_ls.builtins.formatting.rustfmt,
-  null_ls.builtins.formatting.zigfmt,
-  null_ls.builtins.formatting.lua_format,
-  -- null_ls.builtins.formatting.djlint,
-  null_ls.builtins.formatting.clang_format
+  null_ls.builtins.formatting.isort, null_ls.builtins.formatting.prettierd,
+  null_ls.builtins.formatting.rustfmt, null_ls.builtins.formatting.zigfmt,
+  null_ls.builtins.formatting.lua_format
 }
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 ---@diagnostic disable-next-line: redundant-parameter
 null_ls.setup({
-  on_init = function(new_client, _) new_client.offset_encoding = 'utf-8' end,
   sources = sources,
   -- Ref: https://github.com/jose-elias-alvarez/null-ls.nvim/wiki/Formatting-on-save
   on_attach = function(client, bufnr)
@@ -35,11 +30,7 @@ null_ls.setup({
       vim.api.nvim_create_autocmd("BufWritePre", {
         group = augroup,
         buffer = bufnr,
-        callback = function()
-          -- vim.lsp.buf.formatting_sync()
-          -- vim.lsp.buf.formatting_seq_sync()
-          vim.lsp.buf.format()
-        end
+        callback = function() vim.lsp.buf.format({bufnr = bufnr}) end
       })
     end
   end

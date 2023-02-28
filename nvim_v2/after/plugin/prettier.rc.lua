@@ -5,16 +5,7 @@ prettier.setup {
   bin = 'prettierd',
   -- bin = 'prettier',
   filetypes = {
-    "css",
-    "html",
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "json",
-    "scss",
-    "less",
-    "toml",
-    "yaml"
+    "css", "html", "javascript", "javascriptreact", "typescript",
+    "typescriptreact", "json", "scss", "less", "toml", "yaml"
   }
 }
