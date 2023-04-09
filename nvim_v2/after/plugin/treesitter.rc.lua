@@ -8,27 +8,9 @@ ts.setup {
     disable = {"python"} -- For autoindent does not work in *.py
   },
   ensure_installed = {
-    "c",
-    "cpp",
-    "css",
-    "dockerfile",
-    "fish",
-    "glsl",
-    "go",
-    "help",
-    "html",
-    "json",
-    "lua",
-    "markdown",
-    "markdown_inline",
-    -- "python",
-    "rust",
-    "sql",
-    "toml",
-    "tsx",
-    "vim",
-    "yaml",
-    "zig"
+    "c", "cpp", "css", "dockerfile", "fish", "glsl", "go", "html", "json",
+    "lua", "markdown", "markdown_inline", -- "python",
+    "rust", "sql", "toml", "tsx", "vim", "yaml", "zig"
   },
   autotag = {enable = true}
 }
