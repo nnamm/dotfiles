@@ -5,11 +5,14 @@
 	editor = nvim
 	excludesfile = /Users/nnamm/.gitignore_global
 [alias]
-	st = status
+	st = status -sb
 	df = diff
 	co = commit
 	cl = clone
 	br = branch
+  bd = branch -D
+  ft = fetch
+  lg = log -graph --oneline
 	ad = add
 	ps = push
 	pl = pull
