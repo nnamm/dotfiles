@@ -12,7 +12,7 @@
 	br = branch
   bd = branch -D
   ft = fetch
-  lg = log -graph --oneline
+  lg = log --graph --oneline
 	ad = add
 	ps = push
 	pl = pull
