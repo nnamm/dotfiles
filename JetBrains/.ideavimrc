@@ -64,6 +64,9 @@ nnoremap - <C-x>
 " Delete a word backwards
 nnoremap dw vb"_d
 
+" Delete
+inoremap <C-d> <DEL>
+
 " Select all
 nnoremap <C-a> gg<S-v>G<CR>
 
@@ -78,10 +81,6 @@ inoremap <C-f> <RIGHT>
 inoremap <C-b> <LEFT>
 inoremap <C-p> <UP>
 inoremap <C-n> <DOWN>
-
-" Delete
-inoremap <C-d> <DEL>
-nnoremap dw vb"_d
 
 
 " Action -------------------------------------------------------------
