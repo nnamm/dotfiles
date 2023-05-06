@@ -82,7 +82,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp
 -- vim.cmd([[autocmd BufWritePre *.go lua Go_org_imports()]])
 
 local lsp_servers = {
-  'gopls', 'pyright', 'zls', 'rust_analyzer', -- 'clangd', 'glslls',
+  'gopls', 'pyright', 'rust_analyzer', -- 'clangd', 'glslls', 'zls',
   'tsserver', 'html', 'cssls', 'yamlls'
 }
 for _, lsp in pairs(lsp_servers) do
