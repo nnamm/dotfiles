@@ -15,7 +15,7 @@ set smartcase
 " 行を折り返さない
 set nowrap
 " エディタスクロール
-set scrolloff=10
+set scrolloff=20
 " クリップボード制御
 set clipboard=unnamed
 set ideajoinset clipboard+=ideaput
