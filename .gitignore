@@ -1,4 +1,4 @@
 .DS_Store
 token
 packer_compiled.lua
-./nvim_v3/lazy-lock.json
+lazy-lock.json
