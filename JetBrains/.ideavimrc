@@ -88,7 +88,7 @@ inoremap <C-n> <DOWN>
 " Quick Documentation -> ctrl + k / shift + k
 " Quick Definition    -> ctrl + y
 nnoremap <C-j> :action GotoNextError<CR>
-nnoremap <leader><space> :action ShowErrorDescription<CR>
+nnoremap <leader>s :action ShowErrorDescription<CR>
 nnoremap gd :action GotoDeclaration<CR>
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gp :action QuickImplementations<CR>
