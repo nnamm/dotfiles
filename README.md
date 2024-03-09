@@ -12,4 +12,4 @@ Include files below.
 - tmux
 - etc
 
-These files use on macOS/WSL/Linux/h.
+These files use on macOS/WSL/Linux.
