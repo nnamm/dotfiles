@@ -1,0 +1,18 @@
+[window]
+padding = { x = 4, y = 4 }
+decorations = "Buttonless"
+opacity = 1.0
+# blur = false
+startup_mode = "Windowed"
+
+[font]
+normal = { family = "PlemolJP35 Console NF", style = "Regular"}
+bold = { family = "PlemolJP35 Console NF", style = "SemiBold"}
+italic = { family = "PlemolJP35 Console NF", style = "Italic"}
+bold_italic = { family = "PlemolJP35 Console NF", style = "SemiBold Italic"}
+size = 12.0
+offset = { x = 1, y = 1 }
+
+[selection]
+save_to_clipboard = true
+
