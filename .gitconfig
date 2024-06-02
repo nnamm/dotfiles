@@ -10,9 +10,9 @@
 	co = commit
 	cl = clone
 	br = branch
-  bd = branch -D
-  ft = fetch
-  lg = log --graph --oneline
+	bd = branch -D
+	ft = fetch
+	lg = log --graph --oneline
 	ad = add
 	ps = push
 	pl = pull
