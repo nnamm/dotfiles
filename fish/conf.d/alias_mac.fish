@@ -1,5 +1,5 @@
-alias ll='exa -al'
-alias ld='exa -al -s new'
+alias ll='eza -al'
+alias ld='eza -al -s new'
 alias lls='exa -al -s size'
 alias cl='clear'
 alias vim='nvim'
