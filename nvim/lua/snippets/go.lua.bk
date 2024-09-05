@@ -1,0 +1,33 @@
+local ls = require("luasnip")
+local s = ls.snippet
+local t = ls.text_node
+local i = ls.insert_node
+
+return {
+  -- function
+  s("fnc", {
+    t({ "func " }),
+    i(1),
+    t({ "(" }),
+    i(2),
+    t({ ") " }),
+    i(3),
+    t({ " {", "" }),
+    t({ "    " }),
+    i(0),
+    t({ "", "}" }),
+  }),
+
+  -- if nil err1
+  s("ifnl", { t({ "if err != nil {", "" }), t({ "    " }), i(0), t({ "", "}" }) }),
+
+  -- if nil err2
+  s("ifnll", {
+    t({ "if err := " }),
+    i(1),
+    t({ "; err != nil {", "" }),
+    t({ "    " }),
+    i(0),
+    t({ "", "}" }),
+  }),
+}

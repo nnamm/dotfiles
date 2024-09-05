@@ -1,0 +1,13 @@
+{
+  "if err != nil": {
+    "prefix": "ifnl",
+    "body": "if err != nil {\n\treturn $0\n}",
+    "description": "Snippet for if err != nil"
+  },
+
+  "if err := xxx;": {
+    "prefix": "ifnll",
+    "body": "if err := ${1:condition}; err != nil {\n\t${2:execute}\n}",
+    "description": "Snippet for if err := xxx"
+  }
+}
