@@ -35,6 +35,9 @@ vim.opt.tabstop = 2
 vim.opt.path:append({ "**" }) -- Finding files - Search down into subfolders
 vim.opt.wildignore:append({ "*/node_modules/*" })
 
+-- recommended for avante.nvim
+vim.opt.laststatus = 3
+
 -- Undercurl
 -- vim.cmd([[let &t_Cs = "\e[4:3m"]])
 -- vim.cmd([[let &t_Ce = "\e[4:0m"]])
