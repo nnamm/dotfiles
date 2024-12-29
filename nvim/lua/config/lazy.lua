@@ -19,6 +19,8 @@ require("lazy").setup({
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = { colorscheme = "nord" } },
     -- import any extras modules here
+    { import = "lazyvim.plugins.extras.ai.copilot" },
+    { import = "lazyvim.plugins.extras.ai.copilot-chat" },
     -- { import = "lazyvim.plugins.extras.coding.luasnip" },
     { import = "lazyvim.plugins.extras.coding.neogen" },
     -- { import = "lazyvim.plugins.extras.coding.nvim-cmp" },
@@ -78,4 +80,4 @@ require("lazy").setup({
 })
 
 -- avante.nvim
-require("avante_lib").load()
+-- require("avante_lib").load()
