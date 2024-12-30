@@ -4,6 +4,7 @@ return {
   -- opts = {
   --   styles = { bold = true, italic = true, transparency = true },
   --   -- groups = { border = "pine" },
+  -- },
 
   "shaunsingh/nord.nvim",
   lazy = false,
@@ -19,5 +20,16 @@ return {
     vim.g.nord_uniform_diff_background = true
     vim.g.nord_bold = true
     require("nord").set()
-  end, -- },
+  end,
+
+  -- "neanias/everforest-nvim",
+  -- version = false,
+  -- lazy = false,
+  -- priority = 1000,
+  -- config = function()
+  --   require("everforest").setup({
+  --     background = "hard",
+  --     transparent_background_level = 0,
+  --   })
+  -- end,
 }
