@@ -1,31 +1,36 @@
-# neovim
+### System Paths and Core Settings ###
+# XDG Base Directory
 set -gx XDG_CACHE_HOME $HOME/.cache
 set -gx XDG_CONFIG_HOME $HOME/.config
+set -gx XDG_DATA_HOME $HOME/.local/share
 
-# FZF
-set -x FZF_DEFAULT_OPTS "--height 50% --layout=reverse --border"
+# Homebrew
+if test -x /opt/homebrew/bin/brew
+    eval (/opt/homebrew/bin/brew shellenv)
+end
 
-# FZF - fish plugin
-set -x FZF_LEGACY_KEYBINDINGS 0
+### Development Tools ###
+# Version Managers
+if status is-interactive
+    pyenv init --path | source
+    source (nodenv init -|psub)
+end
 
-# Python
+# Language-specific settings
 set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 set -x PYTHONDONTWRITEBYTECODE 1
 
-# pyenv
-set -x PATH $HOME/.pyenv/bin $PATH
-status --is-interactive; and pyenv init --path | source
+# Compiler and toolchain
+set -x LDFLAGS -L/opt/homebrew/opt/llvm/lib $LDFLAGS
+set -x CPPFLAGS -I/opt/homebrew/opt/llvm/include $CPPFLAGS
 
-# Golang
-set -x PATH $HOME/go/bin $PATH
-#set -x PATH /usr/local/go/bin $PATH
+### Tool Configuration ###
+# FZF
+set -x FZF_DEFAULT_OPTS '--height 50% --layout=reverse --border'
+set -x FZF_LEGACY_KEYBINDINGS 0
 
-# Rust
-set -x PATH $HOME/.cargo/bin $PATH
-
-# poetry / zls / rust-analyzer
-set -x PATH $HOME/.local/bin $PATH
-
-# nodenv
-set -x PATH $HOME/.nodenv/bin $PATH
-status --is-interactive; and source (nodenv init -|psub)
+### Path Configuration ###
+fish_add_path /opt/homebrew/opt/llvm/bin
+fish_add_path $HOME/.cargo/bin
+fish_add_path $HOME/go/bin
+fish_add_path $HOME/.local/bin

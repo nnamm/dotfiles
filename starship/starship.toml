@@ -1,3 +1,8 @@
+[directory]
+read_only = "🔒"
+truncation_length = 5
+truncate_to_repo = false
+
 [aws]
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 
