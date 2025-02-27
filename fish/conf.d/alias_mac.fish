@@ -1,5 +1,6 @@
 alias ll='eza -al'
 alias ld='eza -al -s new'
+alias lt='eza --icons -T -L 2 -al'
 alias lls='exa -al -s size'
 alias cl='clear'
 alias vim='nvim'
