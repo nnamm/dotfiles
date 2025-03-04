@@ -1,4 +1,23 @@
 return {
+  -- "neovim/nvim-lspconfig",
+  -- opts = {
+  --   servers = {
+  --     gopls = {
+  --       settings = {
+  --         gopls = {
+  --           staticcheck = true,
+  --           analyses = {
+  --             unusedparams = true,
+  --           },
+  --           gofumpt = true,
+  --           memoryMode = "DegradeClosed",
+  --           expandWorkspaceToModule = true,
+  --         },
+  --       },
+  --     },
+  --   },
+  -- },
+
   -- nvim-vmp
   -- Use the Tab-key to confirm a candidate
   -- {
