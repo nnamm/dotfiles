@@ -20,7 +20,7 @@ require("lazy").setup({
     { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = { colorscheme = "iceberg" } },
     -- import any extras modules here
     { import = "lazyvim.plugins.extras.ai.copilot" },
-    { import = "lazyvim.plugins.extras.ai.copilot-chat" },
+    -- { import = "lazyvim.plugins.extras.ai.copilot-chat" },
     -- { import = "lazyvim.plugins.extras.coding.luasnip" },
     { import = "lazyvim.plugins.extras.coding.neogen" },
     -- { import = "lazyvim.plugins.extras.coding.nvim-cmp" },
