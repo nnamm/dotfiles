@@ -18,7 +18,7 @@ return {
   --   },
   -- },
 
-  -- nvim-vmp
+  -- nvim-cmp
   -- Use the Tab-key to confirm a candidate
   -- {
   --   "hrsh7th/nvim-cmp",

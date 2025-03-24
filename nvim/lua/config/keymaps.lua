@@ -41,3 +41,6 @@ keymap.set("n", "<C-S-b>", "<C-b>")
 keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
 end)
+
+-- Avante.nvim
+keymap.set("n", "<leader>al", ":AvanteClear<Return>", opts)
