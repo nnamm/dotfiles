@@ -1,18 +1,25 @@
 [window]
-padding = { x = 5, y = 20 }
+padding = { x = 5, y = 0 }
 dynamic_padding = true
-decorations = "Transparent"
+decorations = "Full"
 opacity = 0.95
 blur = true
-startup_mode = "Windowed"
+startup_mode = "Maximized"
+# startup_mode = "Windowed"
 
 [font]
-normal = { family = "JetBrainsMono Nerd Font Mono", style = "Light"}
-bold = { family = "JetBrainsMono Nerd Font Mono", style = "Light"}
-italic = { family = "JetBrainsMono Nerd Font Mono", style = "Light Italic"}
-bold_italic = { family = "JetBrainsMono Nerd Font Mono", style = "Light Italic"}
-size = 12.0
-offset = { x = 0, y = 3 }
+normal = { family = "JetBrainsMono Nerd Font Mono", style = "Thin"}
+bold = { family = "JetBrainsMono Nerd Font Mono", style = "ExtraLight"}
+italic = { family = "JetBrainsMono Nerd Font Mono", style = "Thin Italic"}
+bold_italic = { family = "JetBrainsMono Nerd Font Mono", style = "ExtraLight Italic"}
+offset = { x = 1, y = 1 }
+# normal = { family = "PlemolJP35 Console NF", style = "Light"}
+# bold = { family = "PlemolJP35 Console NF", style = "Regular"}
+# italic = { family = "PlemolJP35 Console NF", style = "Light Italic"}
+# bold_italic = { family = "PlemolJP35 Console NF", style = "Regular Italic"}
+# offset = { x = 1, y = 5 }
+size = 11.5
+# size = 12.0
 
 [selection]
 save_to_clipboard = true
@@ -21,7 +28,6 @@ save_to_clipboard = true
 style = "Underline"
 
 # Colors (Rose-Pine)
-# https://github.com/alacritty/alacritty-theme/blob/master/themes/rose_pine.toml
 # [colors.primary]
 # background = '#191724'
 # foreground = '#e0def4'
@@ -77,7 +83,8 @@ black   = '#181818'
 red     = '#ab4642'
 green   = '#a1b56c'
 yellow  = '#f7ca88'
-blue    = '#7cafc2'
+# blue    = '#7cafc2'
+blue    = '#81a1c1'
 magenta = '#ba8baf'
 cyan    = '#86c1b9'
 white   = '#d8d8d8'
