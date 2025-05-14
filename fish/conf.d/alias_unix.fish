@@ -1,6 +1,6 @@
 alias ll='eza -al'
 alias ld='eza -al -s new'
-alias lt='eza --icons -T -L 2 -al'
+alias lt='eza --icons -T -L 3 -al'
 alias lls='eza -al -s size'
 alias cl='clear'
 alias vim='nvim.appimage'

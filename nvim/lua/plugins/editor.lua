@@ -223,7 +223,7 @@ return {
   {
     "yetone/avante.nvim",
     event = "VeryLazy",
-    version = false, -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
+    version = false, -- Never set this value to "*"! Never!
     opts = {
       -- My Settings
       provider = "copilot",
@@ -233,6 +233,22 @@ return {
       auto_suggestions_provider = "copilot",
       file_selector = {
         provider = "telescope",
+      },
+      windows = {
+        position = "right",
+        wrap = true,
+        width = 40,
+        height = 30,
+        -- sidebar_header = {
+        --   enabled = false,
+        -- },
+        ask = {
+          start_insert = false,
+        },
+      },
+      web_search_engine = {
+        provider = "brave",
+        proxy = nil,
       },
       -- My Settings end
     },
