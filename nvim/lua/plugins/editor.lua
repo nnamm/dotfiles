@@ -238,10 +238,6 @@ return {
         position = "right",
         wrap = true,
         width = 40,
-        height = 30,
-        -- sidebar_header = {
-        --   enabled = false,
-        -- },
         ask = {
           start_insert = false,
         },
