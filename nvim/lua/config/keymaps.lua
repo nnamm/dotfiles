@@ -43,4 +43,4 @@ keymap.set("n", "<C-j>", function()
 end)
 
 -- Avante.nvim
-keymap.set("n", "<leader>al", ":AvanteClear<Return>", opts)
+-- keymap.set("n", "<leader>al", ":AvanteClear<Return>", opts)
