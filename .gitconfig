@@ -1,9 +1,11 @@
 [user]
 	email = t.nnamm@gmail.com
 	name = nnamm
+
 [core]
 	editor = nvim
 	excludesfile = /Users/nnamm/.gitignore_global
+
 [alias]
 	st = status -sb
 	df = diff
@@ -17,5 +19,9 @@
 	ps = push
 	pl = pull
 	ck = checkout
+
 [init]
 	defaultBranch = main
+
+[ghq]
+  root = /Users/nnamm/Develop/repo
