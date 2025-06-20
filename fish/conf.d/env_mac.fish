@@ -26,7 +26,7 @@ set -x CPPFLAGS -I/opt/homebrew/opt/llvm/include $CPPFLAGS
 
 ### Tool Configuration ###
 # FZF
-set -x FZF_DEFAULT_OPTS '--height 50% --layout=reverse --border'
+set -x FZF_DEFAULT_OPTS '--height 50% --layout=reverse --border --preview "bat --color=always --line-range :80 {}"'
 set -x FZF_LEGACY_KEYBINDINGS 0
 
 ### Path Configuration ###
