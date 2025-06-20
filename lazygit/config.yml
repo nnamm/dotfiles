@@ -1,0 +1,13 @@
+customCommands:
+  - key: "C"
+    context: "files"
+    command: "czg"
+    output: terminal
+
+# gui:
+#   nerdFontsVersion: "3"
+
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
