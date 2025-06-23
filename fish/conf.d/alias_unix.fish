@@ -14,6 +14,10 @@ alias gk='git checkout -b $1'
 alias gl='git log --graph --oneline'
 alias gp='git pull'
 alias gs='git status -sb'
+alias cz="czg"
+alias lg='lazygit'
+alias pr='cd (git rev-parse --show-toplevel)'
+
 alias doc='docker'
 alias dcc='docker compose'
 
