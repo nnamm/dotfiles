@@ -59,6 +59,9 @@ return {
   {
     "CopilotC-Nvim/CopilotChat.nvim",
     opts = {
+      model = "claude-sonnet-4.5",
+      temperature = 0.1,
+      auto_fold = true,
       -- window = {
       --   layout = "float",
       --   relative = "editor",
