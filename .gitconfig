@@ -25,3 +25,4 @@
 
 [ghq]
   root = /Users/nnamm/Develop/repo
+	protocol = ssh
