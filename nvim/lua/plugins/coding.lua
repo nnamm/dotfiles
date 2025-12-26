@@ -88,7 +88,7 @@ return {
         },
         FixDiagnostic = {
           prompt = "コードの診断結果に従って問題を修正してください。修正内容の説明は日本語でお願いします。",
-          mapping = "<leader>ccd",
+          mapping = "<leader>ccD",
           description = "コードの修正",
           selection = require("CopilotChat.select").diagnostics,
         },

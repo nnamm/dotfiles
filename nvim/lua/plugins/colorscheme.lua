@@ -1,4 +1,7 @@
 return {
+  -----------------------------------
+  --  suggestions for dark themes  --
+  -----------------------------------
   -- "rose-pine/neovim",
   -- name = "rose-pine",
   -- opts = {
@@ -62,22 +65,27 @@ return {
   -- lazy = false,
   -- priority = 1000,
 
-  -- "neanias/everforest-nvim",
-  -- version = false,
-  -- lazy = false,
-  -- priority = 1000,
-  -- config = function()
-  --   require("everforest").setup({
-  --     background = "hard",
-  --   })
-  -- end,
-
   "fenetikm/falcon",
   lazy = false,
   priority = 1000,
   config = function()
-    vim.g.falcon_background = 0
     vim.g.falcon_inactive = 1
+    vim.g.falcon_background = 0
     vim.cmd("colorscheme falcon")
   end,
+
+  -----------------------------------
+  --  suggestions for light theme  --
+  -----------------------------------
+  -- "EdenEast/nightfox.nvim",
+  -- lazy = false,
+  -- priority = 1000,
+
+  -- "talha-akram/noctis.nvim",
+  -- lazy = false,
+  -- priority = 1000,
+
+  -- "savq/melange-nvim",
+  -- lazy = false,
+  -- priority = 1000,
 }

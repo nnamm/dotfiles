@@ -16,7 +16,7 @@ vim.opt.hlsearch = true
 vim.opt.backup = false
 vim.opt.showcmd = true
 vim.opt.cmdheight = 1
-vim.opt.laststatus = 2
+vim.opt.laststatus = 0
 vim.opt.scrolloff = 10
 vim.opt.backupskip = { "/tmp/*", "/private/tmp/*" } -- Unix, Mac
 vim.opt.inccommand = "split"
@@ -35,13 +35,13 @@ vim.opt.tabstop = 2
 vim.opt.path:append({ "**" }) -- Finding files - Search down into subfolders
 vim.opt.wildignore:append({ "*/node_modules/*" })
 
--- recommended for avante.nvim
-vim.opt.laststatus = 3
-
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
 vim.cmd([[let &t_Ce = "\e[4:0m"]])
-vim.termguicolors = true
+vim.opt.termguicolors = true
+
+-- Background (for colorscheme)
+-- vim.o.background = "light"
 
 -- shiftwidth/tabstop
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
@@ -52,10 +52,18 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
   end,
 })
 
+-- wrap for markdown files
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+  pattern = { "*.md", "*.markdown" },
+  callback = function()
+    vim.opt.wrap = true
+  end,
+})
+
 -- GLSL
 vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
-  pattern = { "*.vert", "*.flag" },
+  pattern = { "*.vert", "*.frag" },
   callback = function()
-    vim.opt.filetype = "glsl"
+    vim.bo.filetype = "glsl"
   end,
 })
