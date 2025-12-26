@@ -29,3 +29,8 @@ alias cld='cd /Users/nnamm/Library/Mobile\ Documents/com~apple~CloudDocs/'
 alias tm1='tmux new-session\; source-file ~/dotfiles/tmux/.tmux.session1.conf'
 alias tm2='tmux new-session\; source-file ~/dotfiles/tmux/.tmux.session2.conf'
 alias tm3='tmux new-session\; source-file ~/dotfiles/tmux/.tmux.session3.conf'
+
+alias nbe='nb edit $1'
+alias nbl='nb ls --limit 20'
+alias nbla='nb ls --all'
+alias nbg='rg "$1" "$(nb notebooks current --path)"'
