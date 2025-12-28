@@ -54,8 +54,8 @@ if status is-interactive
     abbr -a g git
     abbr -a ga "git add"
     abbr -a gb "git branch"
-    abbr -a gc "git commit -m "
-    abbr -a gck "git checkout -b "
+    abbr -a gc "git commit -m"
+    abbr -a gck "git checkout"
     abbr -a gd "git diff"
     abbr -a gp "git push"
     abbr -a gl "git pull"
