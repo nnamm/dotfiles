@@ -16,10 +16,12 @@ switch (uname)
 end
 
 ### Development Tools ###
-# Python
+# pyenv/nodenv
+fish_add_path $HOME/.pyenv/bin
+fish_add_path $HOME/.nodenv/bin
 if status is-interactive
     pyenv init --path | source
-    source (nodenv init -|psub)
+    source (nodenv init - | psub)
 end
 set -x VIRTUAL_ENV_DISABLE_PROMPT 1
 set -x PYTHONDONTWRITEBYTECODE 1

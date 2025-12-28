@@ -5,6 +5,14 @@ if status is-interactive
         function cat --wraps bat
             bat --paging=never $argv
         end
+    else if type -q batcat
+        # Ubuntu's bat package uses 'batcat' command
+        function cat --wraps batcat
+            batcat --paging=never $argv
+        end
+        function bat --wraps batcat
+            batcat --paging=never $argv
+        end
     end
 
     # ls → eza (icons + git status)
@@ -18,6 +26,14 @@ if status is-interactive
     if type -q fd
         function find --wraps fd
             fd $argv
+        end
+    else if type -q fdfind
+        # Ubuntu's fd-find package uses 'fdfind' command
+        function find --wraps fdfind
+            fdfind $argv
+        end
+        function fd --wraps fdfind
+            fdfind $argv
         end
     end
 
