@@ -57,7 +57,9 @@ if status is-interactive
     # ---------- COMMANDS ----------
     # gqh + fzf interactive
     function ghq-fzf -d "Select repository with fzf"
-        set -l src (ghq list | fzf --height 50% --preview "bat --color=always --line-range :80 (ghq root)/{}/README.*")
+        # Detect which bat command is available (batcat for Ubuntu, bat for others)
+        set -l bat_cmd (command -v bat || command -v batcat || echo "cat")
+        set -l src (ghq list | fzf --height 50% --preview "$bat_cmd --color=always --line-range :80 (ghq root)/{}/README.*")
         if test -n "$src"
             cd (ghq root)/$src
             commandline -f execute
