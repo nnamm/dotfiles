@@ -4,11 +4,11 @@ font-size = 12
 font-style-bold = false
 font-style-italic = false
 font-style-bold-italic = false
-font-feature = -dlig
+font-feature = -calt, -liga, -dlig
 alpha-blending = linear
 
 # Theme color
-theme = Rose Pine
+theme = Iceberg Dark
 
 # UI
 background-opacity = 0.95
@@ -29,11 +29,14 @@ cursor-style-blink = false
 cursor-invert-fg-bg = true
 cursor-opacity = 0.8
 
+# Keybind
+keybind = shift+enter=text:\n
+
 # Others
 mouse-hide-while-typing = true
 resize-overlay = never
 
-#macOS
+# macOS
 macos-titlebar-proxy-icon = hidden
 macos-window-shadow = false
 macos-titlebar-style = tabs
