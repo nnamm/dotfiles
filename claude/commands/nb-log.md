@@ -9,7 +9,9 @@ argument-hint: [optional note]
 
 ## 記録方法
 
-- 入力：`/nb-log` → `~/Develop/repo/github/nnamm/nb/log/YYYYMMDDHHMMSS.md`
+- 入力：`/nb-log` → `~/Develop/repo/github/nnamm/nb/log/YYYYMMDDHHMMSS_xxxxx.md`
+- YYYYMMDDHHMMSSは、ログを記録した日時（年4桁、月2桁、日2桁、時2桁、分2桁、秒2桁）
+- xxxxxは、タスクのタイトルを短縮したもの（スペースはアンダースコアに置換）
 
 ## 記録フォーマット
 
