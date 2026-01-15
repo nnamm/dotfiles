@@ -35,6 +35,7 @@ alias pr='cd (git rev-parse --show-toplevel)'
 alias tm1='tmux new-session\; source-file ~/dotfiles/tmux/.tmux.session1.conf'
 alias tm2='tmux new-session\; source-file ~/dotfiles/tmux/.tmux.session2.conf'
 alias tm3='tmux new-session\; source-file ~/dotfiles/tmux/.tmux.session3.conf'
+alias tm4='tmux new-session\; source-file ~/dotfiles/tmux/.tmux.session4.conf'
 
 ### Directory Shortcuts ###
 # OS-specific directories
