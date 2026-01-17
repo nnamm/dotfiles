@@ -23,3 +23,19 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.spell = false
   end,
 })
+
+-- Automatically navigate to the project root when opening Markdown file
+-- To ensure configuration file like .markdownlint.json are loaded reliaby
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = "*.md",
+  callback = function()
+    local root = vim.fs.find({ ".git", ".markdownlint.json" }, {
+      upward = true,
+      path = vim.fn.expand("%:p:h"),
+    })[1]
+
+    if root then
+      vim.cmd("lcd " .. vim.fn.fnamemodify(root, ":h"))
+    end
+  end,
+})
