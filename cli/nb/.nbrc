@@ -13,8 +13,16 @@
 # https://github.com/xwmx/nb
 ###############################################################################
 
-export EDITOR="nvim"                                                 # Set by `nb` • 2025年 12月15日 月曜日 17時08分16秒 JST
-export NB_DIR="${NB_DIR:-/Users/nnamm/Develop/repo/github/nnamm/nb}" # Set by `nb` • 2025年 12月15日 月曜日 17時12分19秒 JST
+case "$(uname)" in
+Darwin)
+  export EDITOR="nvim"
+  export NB_DIR="/Users/nnamm/Develop/repo/github/nnamm/nb"
+  ;;
+Linux)
+  export EDITOR="/usr/local/bin/nvim.appimage"
+  export NB_DIR="/home/nnamm/Develop/repo/github/nnamm/nb"
+  ;;
+esac
 
 export NB_INDICATOR_AUDIO="🔉"
 export NB_INDICATOR_BOOKMARK="🔖"
