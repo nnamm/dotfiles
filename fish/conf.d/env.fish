@@ -49,6 +49,7 @@ switch (uname)
         fish_add_path $HOME/.local/bin
     case Linux
         fish_add_path /usr/local/go/bin
+        fish_add_path /usr/local/zig
         fish_add_path $HOME/.cargo/bin
         fish_add_path $HOME/go/bin
         fish_add_path $HOME/.local/bin
