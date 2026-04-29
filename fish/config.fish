@@ -79,13 +79,37 @@ if status is-interactive
     abbr -a gl "git pull"
     abbr -a gs "git status -sb"
     abbr -a glg "git log --oneline --graph"
-    # abbr -a cz czg
-    # abbr -a lg lagygit
-    # abbr -a pr "cd (git rev-parse --show-toplevel)"
 
     abbr -a d docker
-    abbr -a dc docker-compose
-    abbr -a dcu "docker-compose up -d"
-    abbr -a dcd "docker-compose down"
+    abbr -a dc docker compose
+    abbr -a dcu "docker compose up -d"
+    abbr -a dcd "docker compose down"
     abbr -a dps "docker ps"
+
+    # eza shortcuts
+    abbr -a ll "eza -al"
+    abbr -a ld "eza -al -s new"
+    abbr -a lt "eza --icons -T -L 3 -al"
+    abbr -a lls "eza -al -s size"
+
+    # General
+    abbr -a cl clear
+    abbr -a cz czg
+    abbr -a lg lazygit
+    abbr -a pr "cd (git rev-parse --show-toplevel)"
+
+    # nb
+    abbr -a nbe "nb edit"
+    abbr -a nbl "nb ls --limit 20"
+    abbr -a nbla "nb ls --all"
+
+    # Darwin-specific
+    switch (uname)
+        case Darwin
+            abbr -a dev "cd ~/Develop"
+            abbr -a mdev "cd ~/Develop/Project"
+            abbr -a cld 'cd /Users/nnamm/Library/Mobile\ Documents/com~apple~CloudDocs/'
+            abbr -a bu "brew upgrade"
+            abbr -a bc "brew cleanup"
+    end
 end
