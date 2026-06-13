@@ -45,8 +45,7 @@ vim.opt.termguicolors = true
 
 -- shiftwidth/tabstop
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
-  --pattern = { "*.go", "*.c", "*.cpp", "*.h", "*.hpp", "*.vert", "*.flag" },
-  pattern = { "*.go" },
+  pattern = { "*.go", "*.c", "*.cpp", "*.h", "*.hpp", "*.vert", "*.flag" },
   callback = function()
     vim.opt.shiftwidth = 4
     vim.opt.tabstop = 4
