@@ -69,6 +69,7 @@ if status is-interactive
     bind \cg ghq-fzf
 
     # ---------- ABBREVIATIONS ----------
+    # Git
     abbr -a g git
     abbr -a ga "git add"
     abbr -a gb "git branch"
@@ -80,6 +81,14 @@ if status is-interactive
     abbr -a gs "git status -sb"
     abbr -a glg "git log --oneline --graph"
 
+    # tmux
+    abbr -a tm "tmux new -s"
+    abbr -a tma "tmux a -t"
+    abbr -a tmls "tmux ls"
+    abbr -a tmks "tmux kill-session -t"
+    abbr -a tmkv "tmux kill-server"
+
+    # Docker
     abbr -a d docker
     abbr -a dc docker compose
     abbr -a dcu "docker compose up -d"
