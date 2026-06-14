@@ -43,27 +43,11 @@ vim.opt.termguicolors = true
 -- Background (for colorscheme)
 -- vim.o.background = "light"
 
--- shiftwidth/tabstop
-vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
-  pattern = { "*.go", "*.c", "*.cpp", "*.h", "*.hpp", "*.vert", "*.flag" },
-  callback = function()
-    vim.opt.shiftwidth = 4
-    vim.opt.tabstop = 4
-  end,
-})
-
--- wrap for markdown files
-vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
-  pattern = { "*.md", "*.markdown" },
-  callback = function()
-    vim.opt.wrap = true
-  end,
-})
-
--- GLSL
-vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
-  pattern = { "*.vert", "*.frag" },
-  callback = function()
-    vim.bo.filetype = "glsl"
-  end,
+-- Filetype detection for GLSL shader files (*.vert, *.frag)
+-- Defined here because vim.filetype.add must run before files are read.
+vim.filetype.add({
+  extension = {
+    vert = "glsl",
+    frag = "glsl",
+  },
 })

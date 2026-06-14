@@ -8,6 +8,23 @@ vim.api.nvim_create_autocmd("InsertLeave", {
   command = "set nopaste",
 })
 
+-- Use 4-space indentation for these filetypes (buffer-local)
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "go", "c", "cpp", "glsl" },
+  callback = function()
+    vim.opt_local.shiftwidth = 4
+    vim.opt_local.tabstop = 4
+  end,
+})
+
+-- Enable soft wrap for Markdown (buffer-local)
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "markdown" },
+  callback = function()
+    vim.opt_local.wrap = true
+  end,
+})
+
 -- Fix conceallevel
 vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = { "json", "jsonc", "markdown" },
