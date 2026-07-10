@@ -5,6 +5,7 @@ font-style-bold = false
 font-style-italic = false
 font-style-bold-italic = false
 font-feature = -calt, -liga, -dlig
+font-variation = wght=300
 alpha-blending = linear
 
 # Theme color
