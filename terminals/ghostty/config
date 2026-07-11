@@ -16,7 +16,7 @@ background-opacity = 0.95
 background-blur = true
 split-divider-color = 666666
 adjust-cell-width = -1
-adjust-cell-height = 10%
+adjust-cell-height = 12%
 
 # Window
 window-height = 50
