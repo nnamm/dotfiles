@@ -3,23 +3,17 @@ return {
   --  active theme: ayu (mirage)   --
   -----------------------------------
   {
-    "Shatur/neovim-ayu",
+    "fenetikm/falcon",
     lazy = true,
-    main = "ayu",
-    opts = {
-      mirage = true,
-      terminal = true,
-      -- overrides = function()
-      --   local colors = require("ayu.colors")
-      --   return { Comment = { fg = colors.comment, italic = true } }
-      -- end,
-      overrides = {},
-    },
+    init = function()
+      vim.g.falcon_inactive = 1
+      vim.g.falcon_background = 0
+    end,
   },
 
   {
     "LazyVim/LazyVim",
-    opts = { colorscheme = "ayu-mirage" },
+    opts = { colorscheme = "falcon" },
   },
 
   -----------------------------------
@@ -89,12 +83,18 @@ return {
   -- { "cocopon/iceberg.vim", lazy = true },
 
   -- {
-  --   "fenetikm/falcon",
+  --   "Shatur/neovim-ayu",
   --   lazy = true,
-  --   init = function()
-  --     vim.g.falcon_inactive = 1
-  --     vim.g.falcon_background = 0
-  --   end,
+  --   main = "ayu",
+  --   opts = {
+  --     mirage = true,
+  --     terminal = true,
+  --     -- overrides = function()
+  --     --   local colors = require("ayu.colors")
+  --     --   return { Comment = { fg = colors.comment, italic = true } }
+  --     -- end,
+  --     overrides = {},
+  --   },
   -- },
 
   -----------------------------------
