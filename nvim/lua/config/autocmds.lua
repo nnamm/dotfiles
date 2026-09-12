@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 
 -- Use 4-space indentation for these filetypes (buffer-local)
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "go", "c", "cpp", "glsl" },
+  pattern = { "go", "c", "cpp", "glsl", "sql" },
   callback = function()
     vim.opt_local.shiftwidth = 4
     vim.opt_local.tabstop = 4
