@@ -1,19 +1,30 @@
 return {
   -----------------------------------
-  --  active theme: ayu (mirage)   --
+  --  active theme                 --
   -----------------------------------
-  {
-    "fenetikm/falcon",
-    lazy = true,
-    init = function()
-      vim.g.falcon_inactive = 1
-      vim.g.falcon_background = 0
-    end,
-  },
+  -- {
+  --   "fenetikm/falcon",
+  --   lazy = true,
+  --   init = function()
+  --     vim.g.falcon_inactive = 1
+  --     vim.g.falcon_background = 0
+  --   end,
+  -- },
+  -- {
+  --   "LazyVim/LazyVim",
+  --   opts = { colorscheme = "falcon" },
+  -- },
 
   {
-    "LazyVim/LazyVim",
-    opts = { colorscheme = "falcon" },
+    "54L1M/Oshen.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("oshen").setup({
+        transparent = true, -- set false for opaque background
+      })
+      vim.cmd.colorscheme("oshen-night") -- or "oshen-day" for light
+    end,
   },
 
   -----------------------------------
