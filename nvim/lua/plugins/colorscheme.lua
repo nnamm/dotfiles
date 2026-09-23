@@ -2,28 +2,20 @@ return {
   -----------------------------------
   --  active theme                 --
   -----------------------------------
-  -- {
-  --   "fenetikm/falcon",
-  --   lazy = true,
-  --   init = function()
-  --     vim.g.falcon_inactive = 1
-  --     vim.g.falcon_background = 0
-  --   end,
-  -- },
-  -- {
-  --   "LazyVim/LazyVim",
-  --   opts = { colorscheme = "falcon" },
-  -- },
-
   {
-    "54L1M/Oshen.nvim",
+    "fenetikm/falcon",
     lazy = false,
     priority = 1000,
     config = function()
-      require("oshen").setup({
-        transparent = true, -- set false for opaque background
+      vim.g.falcon_background = 0
+      vim.g.falcon_inactive = 1
+      vim.api.nvim_create_autocmd("ColorScheme", {
+        pattern = "falcon",
+        callback = function()
+          vim.api.nvim_set_hl(0, "LspInlayHint", { link = "Comment" })
+        end,
       })
-      vim.cmd.colorscheme("oshen-night") -- or "oshen-day" for light
+      vim.cmd.colorscheme("falcon")
     end,
   },
 
@@ -31,37 +23,37 @@ return {
   --  suggestions for dark themes  --
   -----------------------------------
   -- {
+  --   "54L1M/Oshen.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require("oshen").setup({
+  --       transparent = false, -- set false for opaque background
+  --     })
+  --     vim.cmd.colorscheme("oshen-night") -- or "oshen-day" for light
+  --   end,
+  -- },
+
+  -- {
   --   "rose-pine/neovim",
   --   name = "rose-pine",
-  --   lazy = true,
-  --   opts = {
-  --     styles = { bold = true, italic = true, transparency = true },
-  --     palette = {
-  --       main = {
-  --         _nc = "#16141f",
-  --         base = "#191724",
-  --         surface = "#1f1d2e",
-  --         overlay = "#26233a",
-  --         muted = "#6e6a86",
-  --         subtle = "#908caa",
-  --         text = "#e0def4",
-  --         love = "#eb6f92",
-  --         -- gold = "#f6c177", -- original
-  --         gold = "#e6c087",
-  --         rose = "#ebbcba",
-  --         pine = "#31748f",
-  --         -- foam = "#9ccfd8", -- original
-  --         foam = "#c5e5ea",
-  --         iris = "#c4a7e7",
-  --         leaf = "#95b1ac",
-  --         highlight_low = "#21202e",
-  --         highlight_med = "#403d52",
-  --         highlight_high = "#524f67",
-  --         none = "NONE",
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require("rose-pine").setup({
+  --       variant = "main", -- "auto" | "main" | "moon" | "dawn"
+  --       styles = { bold = true, italic = true, transparency = true },
+  --       -- only overrides; merged into the default palette via vim.tbl_extend
+  --       palette = {
+  --         main = {
+  --           -- gold = "#e6c087", -- original: #f6c177
+  --           -- foam = "#c5e5ea", -- original: #9ccfd8
+  --         },
   --       },
-  --     },
-  --     highlight_groups = {},
-  --   },
+  --       highlight_groups = {},
+  --     })
+  --     vim.cmd.colorscheme("rose-pine")
+  --   end,
   -- },
 
   -- {
