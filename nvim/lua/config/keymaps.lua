@@ -39,10 +39,5 @@ keymap.set("n", "<C-S-b>", "<C-b>")
 
 -- Diagnostics
 keymap.set("n", "<C-j>", function()
-  vim.diagnostic.jump({
-    count = 1,
-    on_jump = function(_, bufnr)
-      vim.diagnostic.open_float({ bufnr = bufnr, scope = "cursor", focus = false })
-    end,
-  })
-end)
+  vim.diagnostic.jump({ count = 1, float = true })
+end, opts)
