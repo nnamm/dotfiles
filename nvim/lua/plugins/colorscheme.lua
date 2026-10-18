@@ -20,7 +20,7 @@ return {
   },
 
   -----------------------------------
-  --  suggestions for dark themes  --
+  --  others                       --
   -----------------------------------
   -- {
   --   "54L1M/Oshen.nvim",
@@ -57,29 +57,34 @@ return {
   -- },
 
   -- {
-  --   "shaunsingh/nord.nvim",
-  --   lazy = true,
-  --   init = function()
-  --     vim.g.nord_contrast = true
-  --     vim.g.nord_borders = false
-  --     vim.g.nord_disable_background = true
-  --     vim.g.nord_cursorline_transparent = true
-  --     vim.g.nord_enable_sidebar_background = false
-  --     vim.g.nord_italic = true
-  --     vim.g.nord_uniform_diff_background = true
-  --     vim.g.nord_bold = true
+  --   "gbprod/nord.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require("nord").setup({
+  --       transparent = false,
+  --       terminal_colors = true,
+  --       diff = { mode = "bg" }, -- "bg" | "fg"
+  --       borders = true, -- ウィンドウ区切りの線を表示する
+  --       errors = { mode = "bg" }, -- "bg" | "fg" | "none"
+  --       search = { theme = "vim" }, -- "vim" | "vscode"
+  --       styles = {
+  --         comments = { italic = true },
+  --         keywords = {},
+  --         functions = {},
+  --         variables = {},
+  --       },
+  --     })
+  --     vim.cmd.colorscheme("nord")
   --   end,
   -- },
 
   -- {
-  --   "andersevenrud/nordic.nvim",
-  --   lazy = true,
-  --   init = function()
-  --     vim.g.nord_underline_option = "none"
-  --     vim.g.nord_italic = true
-  --     vim.g.nord_italic_comments = true
-  --     vim.g.nord_minimal_mode = false
-  --     vim.g.nord_alternate_backgrounds = false
+  --   "AlexvZyl/nordic.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme("nordic")
   --   end,
   -- },
 
@@ -87,23 +92,17 @@ return {
 
   -- {
   --   "Shatur/neovim-ayu",
-  --   lazy = true,
-  --   main = "ayu",
-  --   opts = {
-  --     mirage = true,
-  --     terminal = true,
-  --     -- overrides = function()
-  --     --   local colors = require("ayu.colors")
-  --     --   return { Comment = { fg = colors.comment, italic = true } }
-  --     -- end,
-  --     overrides = {},
-  --   },
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require("ayu").setup({
+  --       -- overrides = {},
+  --       overrides = function()
+  --         local colors = require("ayu.colors")
+  --         return { Comment = { fg = colors.comment, italic = true } }
+  --       end,
+  --     })
+  --     vim.cmd.colorscheme("ayu-mirage")
+  --   end,
   -- },
-
-  -----------------------------------
-  --  suggestions for light theme  --
-  -----------------------------------
-  -- { "EdenEast/nightfox.nvim", lazy = true },
-  -- { "talha-akram/noctis.nvim", lazy = true },
-  -- { "savq/melange-nvim", lazy = true },
 }
