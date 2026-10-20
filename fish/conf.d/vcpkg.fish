@@ -1,4 +1,4 @@
-if test (uname) != Linux
+if not contains (uname) Linux Darwin
     return
 end
 
